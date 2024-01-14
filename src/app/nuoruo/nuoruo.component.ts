@@ -6,24 +6,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   providers: []
 })
 export class NuoruoComponent implements OnInit, AfterViewInit {
-  @ViewChild('formTest') formTest!: ElementRef
-  loading: boolean = true
-  test= 9
-  a: any
-  b: any
   ngAfterViewInit(): void {
-    // throw new Error('Method not implemented.');
   }
   ngOnInit(): void {
-
   }
   ngOnDestroy() {
-  }
-  formtesst() {
-    console.log(this.formTest)
-  }
-  hello() {
-    alert('这是一个测试文件')
   }
   changeTheme() {
     console.log(window.document.documentElement.getAttribute('data-myw-theme'))
