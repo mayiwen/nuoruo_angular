@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuoruoComponent } from './nuoruo.component';
+import { NuoruoColorModule } from './module/color/color.module';
 const components: any[] = [
   NuoruoComponent
 ];
@@ -13,7 +14,7 @@ let commonModule = [
 @NgModule({
   declarations: [...components],
   exports: [components],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoColorModule],
   bootstrap: [],
   providers: [],
 })

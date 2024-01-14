@@ -1,0 +1,46 @@
+.container > div {
+    margin: 5px auto;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid red;
+  }
+
+.black {
+  background-color: #252525; // 主背景 mainColor
+  color: #a5a4a4;
+  .box {
+    border: 1px solid #444; // box border 
+    background-color: #333; // box b  ackground
+    border-radius: 4px;
+    input {
+      border: 1px solid #444; // box border 
+      background-color: #252525;
+    }
+  }
+}
+
+.white {
+  background-color: #f7f7f7; // 主背景 mainColor
+  color: #515257;
+  .box {
+    border: 1px solid #ccc; // box border
+    background-color: #f1f1f1; // box backgground
+    border-radius: 4px;
+    input {
+      border: 1px solid #bbb; // box border 
+      background-color: #f7f7f7;
+    }
+  }
+}
+.box {
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+  padding: 4px;
+  input {
+    height: 28px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+  }
+}
