@@ -12,4 +12,12 @@ import { NuoruoModule } from './nuoruo/nuoruo.module';
 })
 export class AppComponent {
   title = 'nuoruo_angular';
+  changeTheme() {
+    console.log(window.document.documentElement.getAttribute('data-nuoruo-theme'))
+    if (window.document.documentElement.getAttribute('data-nuoruo-theme') === 'black') {
+      window.document.documentElement.setAttribute('data-nuoruo-theme', 'white');
+    } else {
+      window.document.documentElement.setAttribute('data-nuoruo-theme', 'black');
+    }
+  }
 }
