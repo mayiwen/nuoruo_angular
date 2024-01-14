@@ -1,0 +1,7 @@
+<div class="box" [ngClass]="{fixed: message === 'fixed'}" [ngStyle]="{width: wh, height: wh}">
+    <div class="box" [ngStyle]="{transform: 'rotate(' + deg +'deg)', width: wh, height: wh}">
+        <div [class]="'inner inner' + item" *ngFor="let item of [0, 1, 2, 3, 4, 5, 6, 7];">
+            <div class="single"></div>
+        </div>
+    </div>
+</div>
