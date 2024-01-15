@@ -2,13 +2,9 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  ContentChild,
   EventEmitter,
   Input,
-  OnInit,
   Output,
-  TemplateRef,
-  ViewChild,
 } from '@angular/core';
 @Component({
   selector: 'nuoruo-loading',
