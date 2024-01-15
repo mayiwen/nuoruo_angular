@@ -13,7 +13,7 @@ import {
 @Component({
   selector: 'nuoruo-loading',
   templateUrl: './nuoruo-loading.component.html',
-  styleUrls: ['./nuoruo-loading.component.less'],
+  styleUrls: ['./nuoruo-loading.component.scss'],
   providers: [],
 })
 export class NuoruoLoadingComponent implements AfterViewInit {
