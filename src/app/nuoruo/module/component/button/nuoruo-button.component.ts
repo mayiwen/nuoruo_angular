@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ContentChild, ElementRef, HostBinding, HostListener, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, Input} from '@angular/core';
 @Component({
   selector: 'nr-button',
   templateUrl: './nuoruo-button.component.html',
@@ -14,9 +14,5 @@ export class NuoruoButtonComponent {
   @Input('flagActive') flagActive: boolean = false
   /** 设置默认的宽度 */
   @Input('width') width = ''
-  al() {
-    alert('你好')
-  }
-  
 }
  
