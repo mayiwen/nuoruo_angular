@@ -1,0 +1,37 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
+
+button {
+    position: relative;
+    @include border('border');
+    @include bc('boxBc');
+    @include c('color');
+    border-radius: 4px;
+    line-height: 28px;
+    height: 28px;
+
+    &:hover {
+        @include bc('border');
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+    &.active {
+        @include c('active');
+    }
+
+}
+
+:host {
+    display: inline;
+}
+
+nr-loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+}

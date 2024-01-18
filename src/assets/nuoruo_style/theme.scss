@@ -1,16 +1,19 @@
 // 定义黑白主题的地方，white 白色主题 black 黑色主题
+$activeColor: #6f4fc9;
 $themes: (
   white: (
     color: #ddd, // 颜色
     border: #444, // 边框
     bc: #282828, // 背景
-    boxBc: #333 // 一级盒子背景
+    boxBc: #333, // 一级盒子背景
+    active: $activeColor, // 选中色
   ),
   black: (
     color: #515151, // 颜色
     border: #ccc, // 边框
     bc: #f7f7f7, // 背景
-    boxBc: #f1f1f1 // 一级盒子背景
+    boxBc: #f1f1f1, // 一级盒子背景
+    active: $activeColor, // 选中色
   )
 );
 

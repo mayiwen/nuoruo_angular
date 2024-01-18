@@ -1,3 +1,4 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
 .box {
   position: relative;
   display: inline-block;
@@ -21,10 +22,9 @@
   width: 20%;
   border-radius: 100%;
   margin-left: 43%;
-  background-color: #f7f7f7;
   z-index: -1;
   cursor: wait;
-  background-color: black;
+  @include bc('color');
   opacity: 0.5;
 }
 .fixed {

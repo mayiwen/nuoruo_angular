@@ -7,7 +7,7 @@ import {
   Output,
 } from '@angular/core';
 @Component({
-  selector: 'nuoruo-loading',
+  selector: 'nr-loading',
   templateUrl: './nuoruo-loading.component.html',
   styleUrls: ['./nuoruo-loading.component.scss'],
   providers: [],
