@@ -22,9 +22,7 @@ button {
     }
 
     &.active {
-        @include c('active');
-        @include border('active');
-
+        @include c('active'); @include bc('activeBc');
     }
 }
 
