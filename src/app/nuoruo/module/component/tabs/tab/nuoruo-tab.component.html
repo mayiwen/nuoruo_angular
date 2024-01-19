@@ -1,0 +1,6 @@
+ <div *ngIf="mywTabDirective && flagShow">
+    <ng-content *ngTemplateOutlet="mywTabDirective.templateRef"></ng-content>
+  </div>
+  <div [hidden]="!flagShow" *ngIf="!mywTabDirective">
+    <ng-content></ng-content>
+  </div>

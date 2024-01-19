@@ -11,7 +11,7 @@ export class NuoruoButtonComponent {
   /** 是否禁用 */
   @Input('disabled') disabled: boolean = false
   /** 是否是选择中状态 */
-  @Input('flagActive') flagActive: boolean = false
+  @Input('active') active: boolean = false
   /** 设置默认的宽度 */
   @Input('width') width = ''
 }

@@ -1,4 +1,4 @@
-<button [disabled]="disabled || loading" [ngClass]="{active: flagActive}" [ngStyle]="{width: width + 'px'}">
+<button [disabled]="disabled || loading" [ngClass]="{active: active}" [ngStyle]="{width: width + 'px'}">
     <nr-loading w="24px" *ngIf="loading"></nr-loading>
     <ng-content></ng-content>
 </button>
