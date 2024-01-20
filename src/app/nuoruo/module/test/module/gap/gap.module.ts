@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NuoruoTestComponent } from './test.component';
-import { NuoruoComponentModule } from '../component/nuoruo-component.module';
-import { NuoruoLayoutModule } from '../layout/nuoruo-layout.module';
-import { NuoruoTestLoadingModule } from './module/loading/loading.module';
-import { NuoruoTestGapModule } from './module/gap/gap.module';
+
+import { NuoruoTestGapComponent } from './gap.component';
+import { NuoruoComponentModule } from '../../../component/nuoruo-component.module';
+import { NuoruoLayoutModule } from '../../../layout/nuoruo-layout.module';
 
 const module: any[] = [
   NuoruoComponentModule,
-  NuoruoLayoutModule,
-  NuoruoTestLoadingModule,
-  NuoruoTestGapModule
+  NuoruoLayoutModule
 ]
 const components: any[] = [
-  NuoruoTestComponent
+  NuoruoTestGapComponent
 ];
 const directive = [
 ];
@@ -28,4 +25,4 @@ let commonModule = [
   bootstrap: [],
   providers: [],
 })
-export class NuoruoTestModule {}
+export class NuoruoTestGapModule {}

@@ -5,8 +5,10 @@ import { NuoruoComponent } from './nuoruo.component';
 import { NuoruoColorModule } from './module/color/color.module';
 import { NuoruoComponentModule } from './module/component/nuoruo-component.module';
 import { NuoruoTestModule } from './module/test/test.module';
+import { NuoruoLayoutModule } from './module/layout/nuoruo-layout.module';
 const module: any[] = [
   NuoruoComponentModule,
+  NuoruoLayoutModule,
   NuoruoTestModule
 ]
 const components: any[] = [
