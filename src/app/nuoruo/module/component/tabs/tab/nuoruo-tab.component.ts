@@ -8,14 +8,11 @@ import { NuoruoTabDirective } from '../directive/nuoruo-tab.directive';
 export class NuoruoTabComponent implements OnInit, AfterViewInit {
   @Input() v = '';
   @Output() tabClick = new EventEmitter()
-  // @ContentChild('tabset') oneTemplate: TemplateRef<any>;
   @ContentChild(NuoruoTabDirective) mywTabDirective!:  NuoruoTabDirective
-  // @ContentChildren(MywTableDirective) qlist!: QueryList<MywTableDirective>;
 
   flagShow = false;
   selectTab = 0;
   constructor(private cdr: ChangeDetectorRef) {
-
   }
   ngAfterViewInit(): void {
   }

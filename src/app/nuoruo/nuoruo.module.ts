@@ -4,11 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuoruoComponent } from './nuoruo.component';
 import { NuoruoColorModule } from './module/color/color.module';
 import { NuoruoComponentModule } from './module/component/nuoruo-component.module';
+import { NuoruoTestModule } from './module/test/test.module';
 const module: any[] = [
-  NuoruoComponentModule
+  NuoruoComponentModule,
+  NuoruoTestModule
 ]
 const components: any[] = [
-  NuoruoComponent
+  NuoruoComponent,
+  
 ];
 const directive = [
 ];
