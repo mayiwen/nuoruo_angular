@@ -1,0 +1,16 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
+
+.icon {
+    text-align: center;
+    vertical-align: middle;
+    transform: translate(-1px, 0);
+    @include c('color');
+    color: white;
+
+}
+use {
+    @include fill('color');
+}
+:host {
+    display: inline-block;
+}
