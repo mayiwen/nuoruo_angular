@@ -1,0 +1,13 @@
+<div class="box">
+    <div *ngIf="top" [ngStyle]="{height: top >= 1 ? top + 'px' : top * 100 +'%'}" class="top">
+        <ng-container *ngTemplateOutlet="headerTemplate; context: { $implicit: title }"></ng-container>
+    </div>
+    <div [ngStyle]="{height: heightStr}" style="width: 100%; position: relative;">
+        <div [ngStyle]="{width: left >= 1 ? left + 'px' : left * 100 +'%'}" style="height: 100%;" class="left">
+            <ng-container *ngTemplateOutlet="leftTemplate; context: { $implicit: title }"></ng-container>
+        </div>
+        <div [ngStyle]="{width: getWidthStr}" class="right" style="height: 100%; position: absolute;">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

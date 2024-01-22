@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NuoruoSplitComponent } from './nuoruo-split.component';
+const components = [
+  NuoruoSplitComponent,
+];
+@NgModule({
+  declarations: [...components],
+  exports: [...components],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  bootstrap: [],
+  providers: [],
+})
+export class NuoruoSplitModule {}

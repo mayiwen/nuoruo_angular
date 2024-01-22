@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.right {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: auto;
+}
+
+.left {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: overlay;
+}
+
+.top {
+  overflow: hidden;
+}
