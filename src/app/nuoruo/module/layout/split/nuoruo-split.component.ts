@@ -8,8 +8,8 @@ import { AfterViewInit, Component, ContentChild, Input, TemplateRef } from '@ang
 export class NuoruoSplitComponent implements AfterViewInit {
 
   @ContentChild('top', { static: true }) headerTemplate!: TemplateRef<any>;
-
   @ContentChild('left', { static: true }) leftTemplate!: TemplateRef<any>;
+  
   @Input('top') top: number = 0
   @Input('left') left: number = 0
   public heightStr: string = ''
