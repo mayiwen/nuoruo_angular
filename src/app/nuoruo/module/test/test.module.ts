@@ -7,13 +7,15 @@ import { NuoruoLayoutModule } from '../layout/nuoruo-layout.module';
 import { NuoruoTestLoadingModule } from './module/loading/loading.module';
 import { NuoruoTestGapModule } from './module/gap/gap.module';
 import { NuoruoTestIconModule } from './module/icon/icon.module';
+import { NuoruoTestTabModule } from './module/tab/tab.module';
 
 const module: any[] = [
   NuoruoComponentModule,
   NuoruoLayoutModule,
   NuoruoTestLoadingModule,
   NuoruoTestGapModule,
-  NuoruoTestIconModule
+  NuoruoTestIconModule,
+  NuoruoTestTabModule
 ]
 const components: any[] = [
   NuoruoTestComponent

@@ -7,6 +7,7 @@ import { NuoruoTabDirective } from '../directive/nuoruo-tab.directive';
 })
 export class NuoruoTabComponent implements OnInit, AfterViewInit {
   @Input() v = '';
+  @Input() data:any = '';
   @Output() tabClick = new EventEmitter()
   @ContentChild(NuoruoTabDirective) mywTabDirective!:  NuoruoTabDirective
 

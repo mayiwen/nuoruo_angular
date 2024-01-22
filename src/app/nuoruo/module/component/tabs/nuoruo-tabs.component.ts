@@ -13,7 +13,6 @@ import { NuoruoTabComponent } from './tab/nuoruo-tab.component';
 })
 export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueAccessor {
   @ContentChildren(NuoruoTabComponent) tabsetList!: QueryList<NuoruoTabComponent>;
-  @Output() changeTabOutput = new EventEmitter()
   @Output() tabClick = new EventEmitter()
   tabsetTitleList = [] as any;
   selectTab = 0;
@@ -48,7 +47,6 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
       item.selectTab = indexi;
       item.nextTick();
     });
-    this.changeTabOutput.emit(index)
     this.tabClick.emit(itemSave)
   }
   ngAfterViewInit() {
@@ -56,7 +54,6 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
     console.log('tabset ngAfterViewInit')
     console.log(this.tabsetTitleList)
     console.log(this.selectTab)
-
     this.tabsetList.forEach((item, index) => {
       if (index === this.selectTab) {
         item.flagShow = true;
