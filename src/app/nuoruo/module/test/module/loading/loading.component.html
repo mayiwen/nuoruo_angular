@@ -1,7 +1,4 @@
-<div style="height: 8px;"></div>
-<nr-loading></nr-loading>
-<nr-button [loading]=true>loading</nr-button>
-<nr-button (click)="loadingShow()">点击弹出全局loading</nr-button>
+<nr-gap></nr-gap>
 
 <h2>nr-loading</h2>
 描述：生成一个loading图标。可以将这个图标以定位的方式，添加到你想要的loading的元素上。如上面中间的图标就是在button上添加一个loading。
@@ -12,4 +9,8 @@
 <h3>公开的方法</h3>
 <p>show() 无入参 弹出全局loading</p>
 <p>hide() 无入参 隐藏全局loading</p>
+<nr-gap></nr-gap>
+<nr-loading></nr-loading>
+<nr-button [loading]=true>loading</nr-button>
+<nr-button (click)="loadingShow()">点击弹出全局loading</nr-button>
 

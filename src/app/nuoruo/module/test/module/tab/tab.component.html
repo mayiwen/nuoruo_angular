@@ -1,10 +1,4 @@
 <nr-gap></nr-gap>
-<nr-tabs (tabClick)="tabClickFn($event)">
-    <nr-tab v="标签1" data="1">1</nr-tab>
-    <nr-tab v="标签2">2</nr-tab>
-    <nr-tab v="标签3">3</nr-tab>
-    <nr-tab v="标签4">4</nr-tab>
-</nr-tabs>
 
 <h2>nr-tabs</h2>
 描述：多个tab的一个集合
@@ -34,5 +28,11 @@ data: any 你可以在 nr-tab 绑定任意数据。以方便 tabClick 取用的�
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/nt-template&gt; <br>
 &nbsp;&nbsp;&lt;/nt-tab&gt; <br>
 &lt;/nt-tabs&gt; <br>
+<nr-tabs (tabClick)="tabClickFn($event)">
+    <nr-tab v="标签1" data="1">1</nr-tab>
+    <nr-tab v="标签2">2</nr-tab>
+    <nr-tab v="标签3">3</nr-tab>
+    <nr-tab v="标签4">4</nr-tab>
+</nr-tabs>
 
 

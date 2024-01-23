@@ -4,9 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NuoruoComponentModule } from '../../../component/nuoruo-component.module';
 import { NuoruoTestLoadingComponent } from './loading.component';
+import { NuoruoLayoutModule } from '../../../layout/nuoruo-layout.module';
 
 const module: any[] = [
-  NuoruoComponentModule
+  NuoruoComponentModule,
+  NuoruoLayoutModule
 ]
 const components: any[] = [
   NuoruoTestLoadingComponent

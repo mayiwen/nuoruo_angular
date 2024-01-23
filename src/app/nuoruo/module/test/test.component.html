@@ -1,21 +1,21 @@
 <nr-tabs>
     <nr-tab v="基础组件">
-        <!-- <div style="height: 10px;"></div> -->
-        <nr-gap></nr-gap>
-        <!-- <nr-button>你好</nr-button>
-        <nr-loading></nr-loading> -->
-        <nr-tabs>
-            <nr-tab v="tab"><nuoruo-test-tab></nuoruo-test-tab></nr-tab>
-            <nr-tab v="loading"><nuoruo-test-loading></nuoruo-test-loading></nr-tab>
-            <nr-tab v="icon"><nuoruo-test-icon></nuoruo-test-icon></nr-tab>
-        </nr-tabs>
-
+        <ng-template nrTab>
+            <nr-gap></nr-gap>
+            <nr-tabs>
+                <nr-tab v="tab"><nuoruo-test-tab></nuoruo-test-tab></nr-tab>
+                <nr-tab v="loading"><nuoruo-test-loading></nuoruo-test-loading></nr-tab>
+                <nr-tab v="icon"><nuoruo-test-icon></nuoruo-test-icon></nr-tab>
+            </nr-tabs>
+        </ng-template>
     </nr-tab>
     <nr-tab v="布局组件">
-        <nr-gap></nr-gap>
-        <nr-tabs>
-            <nr-tab v="gap"><nuoruo-test-gap></nuoruo-test-gap></nr-tab>
-            <nr-tab v="split"><nuoruo-test-split></nuoruo-test-split></nr-tab>
-        </nr-tabs>
+        <ng-template nrTab>
+            <nr-gap></nr-gap>
+            <nr-tabs>
+                <nr-tab v="gap"><nuoruo-test-gap></nuoruo-test-gap></nr-tab>
+                <nr-tab v="split"><nuoruo-test-split></nuoruo-test-split></nr-tab>
+            </nr-tabs>
+        </ng-template>
     </nr-tab>
 </nr-tabs>
