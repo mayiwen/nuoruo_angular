@@ -1,0 +1,77 @@
+<!-- <div class="myw-input-box" >
+    <input
+    type="text"
+    #input1
+    [(ngModel)]="fatherData"
+    (ngModelChange)="changeValue($event, input1)"
+    [ngStyle]="{ width: w + 'px' }"
+    [placeholder]="bold ? '' : placeholder"
+    [ngClass]="{bold: bold, novalue: _fathrData, disabled: disabled}"
+    [name]="name"
+    [disabled]="disabled ? true : false"
+    />
+  <label *ngIf="bold">{{placeholder}}</label>
+</div> -->
+<div style="display: inline-block; position: relative;">
+  <myw-input w="200" [ngModel]="nowDateString" (click)="showDateSelect($event)"></myw-input>
+  <div
+    style="border: 1px solid #eee; height: 250px; width: 220px; position: absolute; left: 0; top: 0; background-color: white; z-index: 100;"
+    *ngIf="flagShow">
+    <div style="text-align: center;">{{nowDateString}} 所选年份：{{selectYear}}</div>
+    <ng-container *ngIf="selectPanel === 'd'">
+      <div style="margin-bottom: 10px;" (click)="$event.stopPropagation()">
+        <nr-button w="30" (click)="toBeforeYear()">←</nr-button>
+        <nr-button w="30" (click)="toBeforeMonth()">&lt;</nr-button>
+        <nr-button w="45" style="margin-left: calc((100% - 210px) / 4);" (click)="selectPanelFn('y'); $event.stopPropagation()">{{nowDate | date: 'yyyy'}}</nr-button>
+        <nr-button w="45" style="margin-left: calc((100% - 210px) / 4);" (click)="selectPanelFn('m', nowDateYear); $event.stopPropagation()">{{nowDate | date: 'MM'}}</nr-button>
+        <nr-button w="30" style="float: right;" (click)="toAfterYear()">→</nr-button>
+        <nr-button w="30" (click)="toAfterMonth()" style="float: right;">&gt;</nr-button>
+      </div>
+      <div *ngFor="let item of dataArr;" style=" height: 30px; margin-bottom: 3px;">
+        <div *ngFor="let itemi of item;"
+          style="display: inline-block; width: 14.2859%; height: 30px; text-align: center;">
+          <nr-button w="24" (click)="selectDate(itemi); flagShow= false" *ngIf="itemi.type === 'now'; else sss"
+            >{{itemi.date | date: 'd'}}</nr-button>
+          <ng-template #sss>
+            <nr-button w="24" (click)="selectDate(itemi); flagShow= false">{{itemi.date | date: 'd'}}</nr-button>
+          </ng-template>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="selectPanel === 'y'">
+      <div style="margin-bottom: 10px;" (click)="$event.stopPropagation()">
+        <nr-button w="30" (click)="toBeforeYearArr()">←</nr-button>
+        <!-- <nr-button w="30" active="true">年</nr-button> -->
+        <!-- <nr-button w="90" style="margin-left: calc((100% - 210px) / 2);" (click)="selectPanelFn('y'); $event.stopPropagation()">{{nowDate | date: 'yyyy'}}年{{nowDate | date:
+          'MM'}}月</nr-button> -->
+          请选择年份
+        <nr-button w="30" (click)="toAfterYearArr()" style="float: right;">→</nr-button>
+        <!-- <nr-button w="30" disabled="true" style="float: right;" >月</nr-button> -->
+      </div>
+      <div *ngFor="let item of yearArr;" style=" height: 30px; margin-bottom: 3px;"  (click)="$event.stopPropagation()">
+        <div *ngFor="let itemi of item;"
+          style="display: inline-block; width: 20%; height: 30px; text-align: center;">
+          <nr-button w="43" (click)="selectPanelFn('m', itemi);$event.stopPropagation()">{{itemi}}</nr-button>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="selectPanel === 'm'">
+      <div style="margin-bottom: 10px;" (click)="$event.stopPropagation()">
+        <!-- <nr-button w="30" (click)="toBeforeYear()">←</nr-button>
+        <nr-button w="30" active="true">年</nr-button> -->
+        <!-- <nr-button w="90" style="margin-left: calc((100% - 210px) / 2);" (click)="selectPanelFn('y'); $event.stopPropagation()">{{nowDate | date: 'yyyy'}}年{{nowDate | date:
+          'MM'}}月</nr-button> -->
+          所选年份： <nr-button (click)="selectPanelFn('y');$event.stopPropagation()">{{selectYear}}</nr-button> 选择月份
+        <!-- <nr-button w="30" >月</nr-button>
+        <nr-button w="30" (click)="toAfterMonth()" style="float: right;">&gt;</nr-button> -->
+      </div>
+      <div *ngFor="let item of monthArr;" style=" height: 30px; margin-bottom: 3px;"  (click)="$event.stopPropagation()">
+        <div *ngFor="let itemi of item;"
+          style="display: inline-block; width: 50%; height: 30px; text-align: center;">
+          <nr-button w="100" (click)="selectPanelFn('d', itemi);$event.stopPropagation()">{{itemi}}月</nr-button>
+        </div>
+      </div>
+    </ng-container>
+    
+  </div>
+</div>
