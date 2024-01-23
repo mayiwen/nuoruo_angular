@@ -9,6 +9,7 @@ import { NuoruoTestGapModule } from './module/gap/gap.module';
 import { NuoruoTestIconModule } from './module/icon/icon.module';
 import { NuoruoTestTabModule } from './module/tab/tab.module';
 import { NuoruoTestSplitModule } from './module/split/split.module';
+import { NuoruoTestPageModule } from './module/page/page.module';
 
 const module: any[] = [
   NuoruoComponentModule,
@@ -17,7 +18,7 @@ const module: any[] = [
   NuoruoTestGapModule,
   NuoruoTestIconModule,
   NuoruoTestTabModule,
-  NuoruoTestSplitModule
+  NuoruoTestSplitModule,NuoruoTestPageModule
 ]
 const components: any[] = [
   NuoruoTestComponent

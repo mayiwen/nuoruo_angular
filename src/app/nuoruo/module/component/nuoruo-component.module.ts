@@ -5,7 +5,8 @@ import { NuoruoLoadingModule } from './loading/nuoruo-loading.module';
 import { NuoruoButtonModule } from './button/nuoruo-button.module';
 import { NuoruoTabsModule } from './tabs/nuoruo-tabs.module';
 import { MywIconModule } from './icon/nuoruo-icon.module';
-const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule]
+import { NuoruoPageModule } from './page/nuoruo-page.module';
+const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule]
 const components: any[] = [
 ];
 const directive = [

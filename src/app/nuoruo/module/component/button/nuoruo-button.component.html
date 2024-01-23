@@ -1,4 +1,4 @@
-<button [disabled]="disabled || loading" [ngClass]="{active: active}" [ngStyle]="{width: width + 'px'}">
+<button [disabled]="disabled || loading" [ngClass]="{active: active}" [ngStyle]="{width: width + 'px', minWidth: minWidth + 'px'}" [title]="minWidth">
     <nr-loading w="24px" *ngIf="loading"></nr-loading>
     <ng-content></ng-content>
 </button>

@@ -14,5 +14,8 @@ export class NuoruoButtonComponent {
   @Input('active') active: boolean = false
   /** 设置默认的宽度 */
   @Input('width') width = ''
+  @Input('minWidth') minWidth = ''
+  ngOnInit() {
+  }
 }
  
