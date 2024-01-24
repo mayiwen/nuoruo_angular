@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuoruoLoadingModule } from './loading/nuoruo-loading.module';
 import { NuoruoButtonModule } from './button/nuoruo-button.module';
 import { NuoruoTabsModule } from './tabs/nuoruo-tabs.module';
-import { MywIconModule } from './icon/nuoruo-icon.module';
+import { NuoruoIconModule } from './icon/nuoruo-icon.module';
 import { NuoruoPageModule } from './page/nuoruo-page.module';
 import { NuoruoInputModule } from './input/nuoruo-input.module';
 import { NuoruoTableModule } from './table/nuoruo-table.module';
 import { NuoruoMessageModule } from './message/nuoruo-message.module';
-const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule, NuoruoMessageModule]
+import { NuoruoModalModule } from './modal/nuoruo-modal.module';
+const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, NuoruoIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule, NuoruoMessageModule,
+  NuoruoModalModule]
 const components: any[] = [
 ];
 const directive = [

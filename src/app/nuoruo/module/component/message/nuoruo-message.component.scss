@@ -11,9 +11,6 @@
 }
 div {
   border-radius:5px;
-  // border: 1px solid #ccc;
-  @include border('active');
-  // background-color: #c2c5d1;
   @include bc('border');
   @include c('color');
   padding: 3px 10px;

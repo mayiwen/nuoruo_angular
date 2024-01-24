@@ -1,0 +1,15 @@
+<nr-button (click)="flagShow = !flagShow">这是提示的内容</nr-button>
+<ng-template [ngIf]="flagShow" >
+    <nr-modal (close)="flagShow = !flagShow">
+        <ng-template nrModalHeader>
+            你好
+        </ng-template>
+        <ng-template nrModalSection>
+            这是里面的内容
+        </ng-template>
+        <ng-template nrModalFooter>
+            <nr-button (click)="flagShow = !flagShow" class="marginRight10px">取消</nr-button>
+            <nr-button >这是底部的内容</nr-button>
+        </ng-template>
+    </nr-modal>
+</ng-template>
