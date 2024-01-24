@@ -69,9 +69,11 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
           if (res) {
             this.fatherData = e
             this.fatherDataCopy = this._fathrData ? JSON.parse(JSON.stringify(this._fathrData)) : ''
+            
           } else {
             this._fathrData = JSON.parse(JSON.stringify(this.fatherDataCopy))
             input.value = this._fathrData
+            this.fatherData = input.value
           }
         } catch(error) {
           this.fatherData = ''
