@@ -1,3 +1,4 @@
+<nr-gap></nr-gap>
 <nr-table [tableCol]="tableCol" [tableData]="arr" flagExpand="show" (dragAfter)="dragAfter($event)" >
     <ng-template nrTable select="edit" let-item let-show="show">
        <span *ngIf="item.children && item.children.length" (click)="item.show = !item.show">{{item.show ? '收起子项' : '展开子项'}}</span>

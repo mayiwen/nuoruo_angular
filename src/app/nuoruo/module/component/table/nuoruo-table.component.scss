@@ -1,8 +1,11 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
+// 设置一个背景
 .table-item {
     display: inline-block;
     height: 30px;
     width: 100px;
-    background-color: #f0f0f0;
+    // background-color: #f0f0f0;
+    @include bc('bc');
     line-height: 30px;
     text-align: center;
     box-sizing: border-box;
@@ -10,25 +13,29 @@
     vertical-align: bottom;
     overflow: hidden;
 }
+// 设置边框的颜色
 .header>div {
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    @include borderTop('border');
+    @include borderRight('border');
+    @include borderBottom('border');
+    @include bc('activeBc');
 }
 .header>div:first-of-type {
-    border-left: 1px solid #ccc;
+    @include borderLeft('border');
 }
 .table-body {
     height: calc(100% - 30px);
 }
 .table-line>div {
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background-color: white;
+    @include borderRight('border');
+    @include borderBottom('border');
+
+    // background-color: white;
 
 }
 .table-line>div:first-of-type {
-    border-left: 1px solid #ccc;
+    @include borderLeft('border');
+
 }
 
 .table-context {
@@ -43,8 +50,8 @@
     top: 0px;
     margin-top: 30px;
     height: calc(100% - 30px)!important;
-    // height: 100%!important;
-    background-color: white;
+    
+    @include bc('bc');
     z-index: 102;
     .edit {
         position: fixed!important;

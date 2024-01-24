@@ -39,6 +39,26 @@
     border: 1px solid themed($color);
   }
 }
+@mixin borderTop($color) {
+  @include themeify {
+    border-top: 1px solid themed($color);
+  }
+}
+@mixin borderBottom($color) {
+  @include themeify {
+    border-bottom: 1px solid themed($color);
+  }
+}
+@mixin borderRight($color) {
+  @include themeify {
+    border-right: 1px solid themed($color);
+  }
+}
+@mixin borderLeft($color) {
+  @include themeify {
+    border-left: 1px solid themed($color);
+  }
+}
 @mixin borderBottom($color) {
   @include themeify {
     border-bottom: 1px solid themed($color);
