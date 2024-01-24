@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuoruoButtonModule } from '../button/nuoruo-button.module';
 import { NuoruoAlertComponent } from './nuoruo-alert.component';
 import { NuoruoAlertService } from './service/nuoruo-alert.service';
+import { NuoruoGapModule } from '../../layout/gap/nuoruo-gap.module';
 const components = [
   NuoruoAlertComponent,
   
@@ -12,7 +13,7 @@ const components = [
 @NgModule({
   declarations: [...components],
   exports: [...components],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoButtonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoButtonModule, NuoruoGapModule],
   bootstrap: [],
   providers: [NuoruoAlertService],
 })

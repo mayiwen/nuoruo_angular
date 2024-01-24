@@ -4,7 +4,7 @@
   <p *ngIf="messageSave.message" style="margin-bottom: 0px; word-break: break-all; text-align: left;">{{messageSave.message}}</p>
   <br>
   <div style="text-align: right; ">
-    <nr-button (click)="sure()">确定</nr-button>
-    <nr-button (click)="cancel()" style="margin-left: 10px;">取消</nr-button>
+    <nr-button (click)="sure()">确定</nr-button> <nr-gap [w]="4"></nr-gap>
+    <nr-button (click)="cancel()">取消</nr-button>
   </div>
 </div>
