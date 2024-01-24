@@ -1,0 +1,47 @@
+<div style="width: 100%; height: 300px; overflow: auto; position: relative" class="table-context" [ngClass]="{fixeded}">
+  <!-- 表格的头部显示的内容 -->
+
+  <!-- tablaWidth 设置一个总宽度 -->
+  <div class="header" style="
+      font-size: 0;
+      overflow: hidden;
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 100;
+    " [ngStyle]="{ width: tableWidth ? tableWidth + 'px' : '100%' }">
+    <div class="table-item" *ngFor="let item of tableCol" [ngStyle]="{ width: item.w ? item.w + 'px' : '0' }"
+      (contextmenu)="rightClick($event)">
+      {{ item.v }}
+    </div>
+    <span style="position: absolute; left: 0; top: 0; z-index: 101;" class="edit" *ngIf="flagEdit">
+      <nr-button (click)="fixeded = !fixeded">{{fixeded ? '缩小' : '放大'}}</nr-button>
+    </span>
+  </div>
+  <!-- 表格的行 -->
+  <ng-container *ngTemplateOutlet="nodeTreeDisplay; context:{$implicit:tableData,level:0, index: ''}"></ng-container>
+  <ng-template #nodeTreeDisplay let-nodes let-level='level' let-index='index'>
+    <ng-container *ngIf="nodes && nodes.length > 0">
+      <ng-container *ngFor="let item of nodes; let i = index">
+        <div class="table-line" style="font-size: 0; height: 30px; box-sizing: border-box" draggable="true"
+          (dragstart)="dragStart(item, i)" (dragover)="$event.preventDefault()" (drop)="drop(item, i)"
+          [ngStyle]="{ width: tableWidth ? tableWidth + 'px' : '100%' }" [attr.data-index]="i">
+          <div class="table-item ellipsis" *ngFor="let itemi of tableCol; let index = index"
+            [ngStyle]="{ width: itemi.w ? itemi.w + 'px' : '0' }" [title]="item[itemi.value]? item[itemi.value]: ''">
+            <ng-container *ngIf="this.showList[itemi.value]; else tempa">
+              <ng-container [ngTemplateOutlet]="this.showList[itemi.value].templateRef"
+                [ngTemplateOutletContext]="{ $implicit: item }"></ng-container>
+            </ng-container>
+            <ng-template #tempa>
+              {{ item[itemi.value] + 1 }}
+            </ng-template>
+          </div>
+        </div>
+        <ng-container *ngIf="item.children && item.children.length > 0 && item[flagExpand]">
+          <ng-container
+            *ngTemplateOutlet="nodeTreeDisplay; context:{$implicit:item.children,level:level +1, index: index + i, show: true}"></ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-template>
+</div>

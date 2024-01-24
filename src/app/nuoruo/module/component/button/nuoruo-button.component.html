@@ -1,5 +1,4 @@
-<!-- {{border}} -->
-<button [disabled]="disabled || loading" [ngClass]="{active: active, noBorder: noBorder}" [ngStyle]="{width: width + 'px', minWidth: minWidth + 'px'}" [title]="minWidth">
+<button [disabled]="disabled || loading" [ngClass]="{active: active, noBorder: noBorder}" [ngStyle]="{width: w + 'px', minWidth: minWidth + 'px'}" [title]="minWidth">
     <nr-loading w="24px" *ngIf="loading"></nr-loading>
     <ng-content></ng-content>
 </button>

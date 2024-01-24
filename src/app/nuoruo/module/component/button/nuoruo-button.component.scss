@@ -23,10 +23,12 @@ button {
     }
 
     &.active {
-        @include c('active'); @include bc('activeBc');
+        @include c('active');
+        @include bc('activeBc');
     }
-  
+
 }
+
 :host button.noBorder {
     border: 1px solid transparent;
 }

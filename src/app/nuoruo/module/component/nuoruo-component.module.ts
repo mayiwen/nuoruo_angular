@@ -7,7 +7,8 @@ import { NuoruoTabsModule } from './tabs/nuoruo-tabs.module';
 import { MywIconModule } from './icon/nuoruo-icon.module';
 import { NuoruoPageModule } from './page/nuoruo-page.module';
 import { NuoruoInputModule } from './input/nuoruo-input.module';
-const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule, NuoruoInputModule]
+import { NuoruoTableModule } from './table/nuoruo-table.module';
+const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule]
 const components: any[] = [
 ];
 const directive = [

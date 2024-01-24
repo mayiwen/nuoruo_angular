@@ -1,0 +1,10 @@
+<nr-table [tableCol]="tableCol" [tableData]="arr" flagExpand="show" (dragAfter)="dragAfter($event)" >
+    <ng-template nrTable select="edit" let-item let-show="show">
+       <span *ngIf="item.children && item.children.length" (click)="item.show = !item.show">{{item.show ? '收起子项' : '展开子项'}}</span>
+    </ng-template>
+    <ng-template nrTable select="show2" let-item>
+       <nr-button (click)="showFn(item)" w="40">信息</nr-button> <nr-gap [w]="3"></nr-gap>
+       <nr-button t="red" (click)="delete(item)" w="40">删除</nr-button>
+    </ng-template>
+ </nr-table>
+ 
