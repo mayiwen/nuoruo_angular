@@ -31,6 +31,6 @@
 <nr-button minWidth="26" [disabled]="page + 1 > pageTotal" (click)="changePageFn(page + 1)">&gt;</nr-button>
 <nr-button minWidth="26" [disabled]="page >= pageTotal" (click)="changePageFn(pageTotal)">尾页</nr-button>
 
-<!-- <myw-input reg="/^[1-9]\d*$/" [(ngModel)]="jumpPage" ></myw-input> -->
-<!-- <nr-button (click)="jumpPageFn()">跳页</nr-button> -->
+<nr-input reg="/^[1-9]\d*$/" [(ngModel)]="jumpPage" ></nr-input>
+<nr-button (click)="jumpPageFn()">跳页</nr-button>
 <span style="font-size: 12px;">{{total}}条-{{pageTotal}}</span>

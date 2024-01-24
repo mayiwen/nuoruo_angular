@@ -29,7 +29,8 @@
 }
 .fixed {
   z-index: 100000000000;
-  background-color: white;
+  // background-color: white;
+  @include bc('bc');
   position: fixed;
   top: 0;
   left: 0;
