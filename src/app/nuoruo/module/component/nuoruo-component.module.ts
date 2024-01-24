@@ -10,8 +10,9 @@ import { NuoruoInputModule } from './input/nuoruo-input.module';
 import { NuoruoTableModule } from './table/nuoruo-table.module';
 import { NuoruoMessageModule } from './message/nuoruo-message.module';
 import { NuoruoModalModule } from './modal/nuoruo-modal.module';
+import { NuoroAlertModule } from './alert/nuoruo-alert.module';
 const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, NuoruoIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule, NuoruoMessageModule,
-  NuoruoModalModule]
+  NuoruoModalModule, NuoroAlertModule]
 const components: any[] = [
 ];
 const directive = [

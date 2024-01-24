@@ -15,6 +15,7 @@ import { NuoruoTestButtonModule } from './module/button/button.module';
 import { NuoruoTestTableModule } from './module/table/table.module';
 import { NuoruoTestMessgaeModule } from './module/message/messge.module';
 import { NuoruoTestModalModule } from './module/modal/modal.module';
+import { NuoruoTestAlertModule } from './module/alert/alert.module';
 
 const module: any[] = [
   NuoruoComponentModule,
@@ -24,7 +25,7 @@ const module: any[] = [
   NuoruoTestIconModule,
   NuoruoTestTabModule,
   NuoruoTestSplitModule,NuoruoTestPageModule,NuoruoTestFormModule,
-  NuoruoTestButtonModule, NuoruoTestTableModule, NuoruoTestMessgaeModule,NuoruoTestModalModule
+  NuoruoTestButtonModule, NuoruoTestTableModule, NuoruoTestMessgaeModule,NuoruoTestModalModule,NuoruoTestAlertModule
 ]
 const components: any[] = [
   NuoruoTestComponent
