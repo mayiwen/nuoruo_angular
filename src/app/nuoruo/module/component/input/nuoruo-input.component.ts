@@ -19,11 +19,10 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
   @Input('placeholder') placeholder? = ''
   @Input('bold') bold: any
   @Input('name') name: any
+  /** 是否是disabled */
   @Input('disabled') disabled: boolean = false
   /** 父组件传过来的数据 */
   _fathrData: string = ''
-  /** 是否disabled */
-  flagDisabled: boolean = false
   /** 父组件传过的数据复制的一份数据。主要是为了不满足正则的时候，要恢复原来的内容。 */
   fatherDataCopy: string = ''
   constructor() {
@@ -53,7 +52,7 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
     console.log('当前的元素被触发了。')
   }
   setDisabledState?(isDisabled: boolean): void {
-    this.flagDisabled = isDisabled
+    this.disabled = isDisabled
   }
   change = (value:any) => {}
 
