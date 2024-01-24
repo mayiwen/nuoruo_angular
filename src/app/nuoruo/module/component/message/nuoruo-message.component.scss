@@ -1,0 +1,28 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
+:host {
+  position: fixed;
+  left: 0;
+  top: 40px;
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translate(-50%, 0px)!important;
+  font-size: 15px;
+  z-index: 10000;
+}
+div {
+  border-radius:5px;
+  // border: 1px solid #ccc;
+  @include border('active');
+  // background-color: #c2c5d1;
+  @include bc('border');
+  @include c('color');
+  padding: 3px 10px;
+  min-height: 24px;
+  width: 400px;
+  opacity: 0.95;
+}
+
+
+button {
+  border-radius: 50%;
+}

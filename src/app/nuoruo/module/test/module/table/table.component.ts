@@ -6,68 +6,41 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class NuoruoTestTableComponent implements OnInit, AfterViewInit {
   arr = [
-    {id: '1', name: 'zs', age: 20, show: true,
-    children: [{
+    {
+      id: '1', name: 'zs', age: 20, show: true,
+      children: [{
         id: '11', name: 'zs1', age: '200', show: true,
         children: [{
           id: '111', name: 'zs11', age: '2001', show: true
+        },{
+          id: '112', name: 'zs12', age: '2002', show: true
         }]
       }]
     },
-    {id: '2', name: '', age: 21, show: true},
-    {id: '3', name: 'we', age: 22, show: true},
-    {id: '4', name: 'mz', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
-    {id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true},
+    { id: '2', name: '', age: 21, show: true },
+    { id: '3', name: 'we', age: 22, show: true },
+    { id: '4', name: 'mz', age: 23, show: true },
+    { id: '4', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '5', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '6', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '7', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '8', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '9', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '10', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '11', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '12', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '13', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '14', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '15', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '16', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
+    { id: '17', name: 'mzasdfadfasdfa dsf dsf asdf asdf f', age: 23, show: true },
   ]
   tableSetting = {
-    
+
   }
   tableCol = [
     {
-      v: '子项',
+      v: '树类子项',
       value: 'edit',
       w: 100
     },
@@ -92,7 +65,7 @@ export class NuoruoTestTableComponent implements OnInit, AfterViewInit {
       w: 120
     },
   ]
-  constructor() {}
+  constructor() { }
   ngAfterViewInit(): void {
   }
   ngOnInit(): void {

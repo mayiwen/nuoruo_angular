@@ -12,7 +12,8 @@ import { NuoruoTestSplitModule } from './module/split/split.module';
 import { NuoruoTestPageModule } from './module/page/page.module';
 import { NuoruoTestFormModule } from './module/form/form.module';
 import { NuoruoTestButtonModule } from './module/button/button.module';
-import { NuoruoTestTableModule } from './module/table/tablep.module';
+import { NuoruoTestTableModule } from './module/table/table.module';
+import { NuoruoTestMessgaeModule } from './module/message/messge.module';
 
 const module: any[] = [
   NuoruoComponentModule,
@@ -22,7 +23,7 @@ const module: any[] = [
   NuoruoTestIconModule,
   NuoruoTestTabModule,
   NuoruoTestSplitModule,NuoruoTestPageModule,NuoruoTestFormModule,
-  NuoruoTestButtonModule, NuoruoTestTableModule
+  NuoruoTestButtonModule, NuoruoTestTableModule, NuoruoTestMessgaeModule
 ]
 const components: any[] = [
   NuoruoTestComponent

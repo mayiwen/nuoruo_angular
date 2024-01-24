@@ -8,7 +8,8 @@ import { MywIconModule } from './icon/nuoruo-icon.module';
 import { NuoruoPageModule } from './page/nuoruo-page.module';
 import { NuoruoInputModule } from './input/nuoruo-input.module';
 import { NuoruoTableModule } from './table/nuoruo-table.module';
-const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule]
+import { NuoruoMessageModule } from './message/nuoruo-message.module';
+const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, MywIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule, NuoruoMessageModule]
 const components: any[] = [
 ];
 const directive = [
@@ -23,4 +24,4 @@ let commonModule = [
   bootstrap: [],
   providers: [],
 })
-export class NuoruoComponentModule {}
+export class NuoruoComponentModule { }
