@@ -18,8 +18,8 @@
   }
   header { 
     height: 30px;  line-height: 30px; padding-left: 10px; border-radius: 5px 5px 0 0;
-    @include bc('bc');
-    @include borderBottom('border')
+    // @include bc('boxBc');
+    // @include borderBottom('border')
   }
   .footer {
     height: 30px; width: 100%; text-align: right; padding: 0 3px; box-sizing: border-box;

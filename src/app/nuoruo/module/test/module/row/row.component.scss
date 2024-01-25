@@ -1,0 +1,8 @@
+@import '../../../../../../assets/nuoruo_style/handle.scss';
+
+.append {
+  height: 100%;
+  width: 100%;
+  @include bc("activeBc");
+  @include c('color');
+}

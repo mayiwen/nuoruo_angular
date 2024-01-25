@@ -4,12 +4,13 @@ import { NuoruoMessageService } from '../../../component/message/service/nuoruo-
 @Component({
   selector: 'nuoruo-test-row',
   templateUrl: './row.component.html',
-  styles: `
-    .append {
-      height: 100%; width: 100%; background-color: rgb(117, 195, 214);
-      color: black
-    }
-  `,
+  // styles: `
+  //   .append {
+  //     height: 100%; width: 100%; background-color: rgb(117, 195, 214);
+  //     color: black
+  //   }
+  // `,
+  styleUrls: ['./row.component.scss'],
   providers: []
 })
 export class NuoruoTestRowComponent implements OnInit, AfterViewInit {

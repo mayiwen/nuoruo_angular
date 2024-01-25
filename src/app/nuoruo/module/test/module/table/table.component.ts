@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NuoruoMessageService } from '../../../component/message/service/nuoruo-message.service';
 @Component({
   selector: 'nuoruo-test-table',
   templateUrl: './table.component.html',
@@ -65,18 +66,16 @@ export class NuoruoTestTableComponent implements OnInit, AfterViewInit {
       w: 120
     },
   ]
-  constructor() { }
+  constructor(private message: NuoruoMessageService) { }
   ngAfterViewInit(): void {
   }
   ngOnInit(): void {
   }
   showFn(item: any) {
-    // this.message.show(item.id + ' ' + item.age + ' ' + item.name)
-    alert(item.id + ' ' + item.age + ' ' + item.name)
+    this.message.show(item.id + ' ' + item.age + ' ' + item.name)
   }
   delete(item: any) {
-    alert('模拟删除的id' + item.id)
-    // this.message.show('模拟删除的id' + item.id)
+    this.message.show('模拟删除的id' + item.id)
   }
   dragAfter(data: any) {
     console.log('这是移动的数据')

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '
 @Component({
   selector: 'nuoruo-test-split',
   templateUrl: './split.component.html',
+  styleUrl: './split.component.scss',
   providers: []
 })
 export class NuoruoTestSplitComponent implements OnInit, AfterViewInit {
