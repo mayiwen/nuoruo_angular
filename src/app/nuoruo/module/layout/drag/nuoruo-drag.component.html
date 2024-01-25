@@ -1,6 +1,6 @@
 <div [class]="'move' + zIndex % 10" (drag)="drag($event)" (dragstart)="dragStart($event)" #dragRef draggable="true" [ngStyle]="{'z-index': zIndex}"
     [ngClass]="{position: position, 'drag-box': true}">
-    <div class="header"><span (click)="position = !position">{{position && v ? v : position ? '点击弹窗下沉-可拖动' : '点击弹窗上浮'}}</span>
+    <div class="header"><span (click)="position = !position">{{position && v ? v : position ? v : v}}</span>
     <nr-button class="close" (click)="closeEmit()">关闭</nr-button></div>
     <div class="body" draggable="true" (dragstart)="$event.preventDefault()">
         <ng-content></ng-content>
