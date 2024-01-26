@@ -2,19 +2,19 @@ import { DatePipe } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ContentChild, ElementRef, HostBinding, HostListener, Input, OnInit, TemplateRef, ViewChild, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
-  selector: 'myw-date',
-  templateUrl: './myw-date.component.html',
-  styleUrls: ['./myw-date.component.scss'],
+  selector: 'nr-date',
+  templateUrl: './nuoruo-date.component.html',
+  styleUrls: ['./nuoruo-date.component.scss'],
   providers: [
     DatePipe,
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => MywDateComponent),
+      useExisting: forwardRef(() => NuoruoDateComponent),
       multi: true
     }
   ]
 })
-export class MywDateComponent implements  AfterViewInit, ControlValueAccessor {
+export class NuoruoDateComponent implements  AfterViewInit, ControlValueAccessor {
   /** 父组件传过来的正则。 */
   @Input('reg') reg? = ''
   @Input('w') w? = '100'
@@ -40,6 +40,7 @@ export class MywDateComponent implements  AfterViewInit, ControlValueAccessor {
   /** 选择的面版 当为d的时候选择日期，当为 y 的时候选择年份，当为m的时候选择日期*/
   selectPanel: 'd' | 'y' | 'm' = 'd'
   flagShow: boolean = false
+active: any;
   @HostListener('window:click', ['$event']) onClose() {
     this.flagShow = false
   }
@@ -167,7 +168,7 @@ export class MywDateComponent implements  AfterViewInit, ControlValueAccessor {
           arr[indexInner].push({
             date: new Date(date.getFullYear() + '/' + this.addZero(date.getMonth() + 1) + '/' + this.addZero(index)),
             type: 'now',
-            select: date.getDate() === index
+            select: +date.getDate() === index
           })
           break
         }

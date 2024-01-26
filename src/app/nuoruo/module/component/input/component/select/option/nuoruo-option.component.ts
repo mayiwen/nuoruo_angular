@@ -1,12 +1,11 @@
 import { AfterViewInit, ChangeDetectorRef, Component, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { MayiwenSelectService } from '../myw-select.service';
 @Component({
-  selector: 'myw-option',
-  templateUrl: './myw-option.component.html',
-  styleUrls: ['./myw-option.component.less'],
+  selector: 'nr-option',
+  templateUrl: './nuoruo-option.component.html',
+  styleUrls: ['./nuoruo-option.component.scss'],
   providers: []
 })
-export class MywOptionComponent implements OnInit, AfterViewInit {
+export class NuoruoOptionComponent implements OnInit, AfterViewInit {
   @Input() value = '';
   @Input() v = '';
   @Input() o: any

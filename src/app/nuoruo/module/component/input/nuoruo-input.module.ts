@@ -8,8 +8,14 @@ import { NuoruoInputComponent } from './nuoruo-input.component';
 // import { nuoruoInputNumberComponent } from './component/number/nuoruo-input-number.component';
 // import { nuoruoDateComponent } from './component/date/nuoruo-date.component';
 import { NuoruoButtonModule } from '../button/nuoruo-button.module';
+import { NuoruoDateComponent } from './component/date/nuoruo-date.component';
+import { NuoruoSelectComponent } from './component/select/nuoruo-select.component';
+import { NuoruoOptionComponent } from './component/select/option/nuoruo-option.component';
 const components = [
   NuoruoInputComponent,
+  NuoruoDateComponent,
+  NuoruoSelectComponent,
+  NuoruoOptionComponent
   // nuoruoTextareaComponent,
   // nuoruoSelectComponent,
   // nuoruoOptionComponent,

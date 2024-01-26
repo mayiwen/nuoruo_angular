@@ -1,0 +1,13 @@
+@import '../../../../../../../assets/nuoruo_style/handle.scss';
+
+.dateBox {
+    @include border('border');
+    height: 250px;
+    width: 220px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    @include bc('bc');
+    z-index: 100;
+}

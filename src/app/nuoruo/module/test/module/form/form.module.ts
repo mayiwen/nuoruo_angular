@@ -6,6 +6,8 @@ import { NuoruoComponentModule } from '../../../component/nuoruo-component.modul
 import { NuoruoLayoutModule } from '../../../layout/nuoruo-layout.module';
 import { NuoruoTestFormComponent } from './form.component';
 import { NuoruoTestFormInputComponent } from './component/input/input.component';
+import { NuoruoTestFormDateComponent } from './component/date/date.component';
+import { NuoruoTestFormSelectComponent } from './component/select/select.component';
 
 const module: any[] = [
   NuoruoComponentModule,
@@ -13,7 +15,9 @@ const module: any[] = [
 ]
 const components: any[] = [
   NuoruoTestFormComponent,
-  NuoruoTestFormInputComponent
+  NuoruoTestFormInputComponent,
+  NuoruoTestFormDateComponent,
+  NuoruoTestFormSelectComponent
 ];
 const directive = [
 ];

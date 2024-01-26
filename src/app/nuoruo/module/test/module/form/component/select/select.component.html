@@ -1,0 +1,5 @@
+<nr-gap></nr-gap>
+你好。
+<nr-select [(ngModel)]="h" (inputChange)="inputChange($event)" name="selectForm">
+    <nr-option [o]="item" v="v" value="value" *ngFor="let item of arr;"></nr-option>
+</nr-select>

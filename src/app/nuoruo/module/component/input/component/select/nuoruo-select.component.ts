@@ -12,28 +12,26 @@ import {
   QueryList,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MayiwenSelectService } from './myw-select.service';
-import { MywOptionComponent } from './option/myw-option.component';
+import { NuoruoOptionComponent } from './option/nuoruo-option.component';
 @Component({
-  selector: 'myw-select',
-  templateUrl: './myw-select.component.html',
-  styleUrls: ['./myw-select.component.scss'],
+  selector: 'nr-select',
+  templateUrl: './nuoruo-select.component.html',
+  styleUrls: ['./nuoruo-select.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => MywSelectComponent),
+      useExisting: forwardRef(() => NuoruoSelectComponent),
       multi: true,
     },
-    MayiwenSelectService,
   ],
 })
-export class MywSelectComponent implements  AfterViewInit, ControlValueAccessor {
+export class NuoruoSelectComponent implements  AfterViewInit, ControlValueAccessor {
   @Input() w = 100;
   @Input() v = 'v';
   @Input() value = 'value';
   @Input() name = '';
   /** 获取 option 的列表  */
-  @ContentChildren(MywOptionComponent) optionList!: QueryList<MywOptionComponent>;
+  @ContentChildren(NuoruoOptionComponent) optionList!: QueryList<NuoruoOptionComponent>;
   @Output('optionSelect') optionSelect = new EventEmitter()
   @Output('inputChange') inputChange = new EventEmitter()
   /** 是否显示下面的option */
