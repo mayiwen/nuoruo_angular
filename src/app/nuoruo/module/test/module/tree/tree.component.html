@@ -1,0 +1,37 @@
+<nr-gap></nr-gap>
+<!-- 树组件思路来自于：https://blog.csdn.net/m0_54944506/article/details/122287533 -->
+<h1>tree 组件 nr-tree</h1>
+<nr-gap></nr-gap>
+
+<p>只提供了一个tree骨架。用户需在在插槽（内容投影）中自定义展示的条目数据。item 当前展示的条目数据， index 根据下标计算的值, level 当前层级</p>
+&lt;nr-tree [(ngModel)]="treeData"&gt; <br />
+&nbsp;&nbsp;&lt;ng-template nrTree let-item let-index="index" let-level="level"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;自定义内容<br />
+&nbsp;&nbsp;&lt;/ng-template&gt;<br />
+&lt;/nr-tree&gt;<br />
+下面是效果展示
+<hr>
+<nr-gap></nr-gap>
+<div style="width: 100%; overflow: auto;">
+    <nr-tree [(ngModel)]="treeData">
+        <ng-template nrTree let-item let-index="index" let-level="level">
+          <div style="width: 800px;">
+            <span (click)="item.flagExpand = !item.flagExpand">{{
+              item.flagExpand ? "关闭子项" : "展开子项"
+            }}</span>
+            {{
+              "当前绑定的值" +
+                item.value +
+                " -当前显示的值 " +
+                item.v +
+                " - 定标：" +
+                index + 
+                " - 层级：" +
+                level
+            }}
+            <span>当前状态： {{ item.flagExpand ? "展开" : "关闭" }}</span>
+          </div>
+        </ng-template>
+      </nr-tree>
+</div>
+<h2>基于tree组件实现一个nr-tree-default 以实现快速的构建tree</h2>

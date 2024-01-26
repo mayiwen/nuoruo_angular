@@ -1,0 +1,18 @@
+<!-- 将父组件绑定的数据传过来。 -->
+<ng-container *ngTemplateOutlet="nodeTreeDisplay; context:{$implicit:fatherNgModel,level:0, index: ''}"></ng-container>
+<!-- 递归元素处 -->
+<ng-template #nodeTreeDisplay let-nodes let-level='level' let-index='index' >
+  <ng-container *ngIf="nodes && nodes.length > 0">
+    <!-- 生成元素 -->
+    <ng-container *ngFor="let item of nodes; let i = index">
+      <div [style]="{'margin-left':level * 10 + 'px'}">
+        <!-- 将myw-tree插槽里面的数据投影在子组件中。 -->
+        <ng-container [ngTemplateOutlet]="nrTree.templateRef" [ngTemplateOutletContext]="{ $implicit: item, index: index + i, level: level }" ></ng-container>
+      </div>
+      <!--递归树的子节点。-->
+      <ng-container *ngIf="item.children && item.children.length > 0 && item.flagExpand">
+        <ng-container *ngTemplateOutlet="nodeTreeDisplay; context:{$implicit:item.children,level:level +1, index: index + i  }"></ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-template> 
