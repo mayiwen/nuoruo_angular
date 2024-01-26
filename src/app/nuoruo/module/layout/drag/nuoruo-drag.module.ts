@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {  NuoruoDragService } from './service/nuoruo-drag.service';
 import { NuoruoDragComponent } from './nuoruo-drag.component';
 import { NuoruoButtonModule } from '../../component/button/nuoruo-button.module';
+import { NuoruoIconModule } from '../../component/icon/nuoruo-icon.module';
 const components = [
   NuoruoDragComponent
 ];
@@ -15,7 +16,8 @@ const components = [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    NuoruoButtonModule
+    NuoruoButtonModule,
+    NuoruoIconModule
   ],
   exports: [
     ...components
