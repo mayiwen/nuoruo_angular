@@ -11,11 +11,13 @@ import { NuoruoButtonModule } from '../button/nuoruo-button.module';
 import { NuoruoDateComponent } from './component/date/nuoruo-date.component';
 import { NuoruoSelectComponent } from './component/select/nuoruo-select.component';
 import { NuoruoOptionComponent } from './component/select/option/nuoruo-option.component';
+import { NuoruoNumberComponent } from './component/number/nuoruo-number.component';
 const components = [
   NuoruoInputComponent,
   NuoruoDateComponent,
   NuoruoSelectComponent,
-  NuoruoOptionComponent
+  NuoruoOptionComponent,
+  NuoruoNumberComponent
   // nuoruoTextareaComponent,
   // nuoruoSelectComponent,
   // nuoruoOptionComponent,

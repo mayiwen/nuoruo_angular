@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 @Component({
-  selector: 'nuoruo-test-form-input',
-  templateUrl: './input.component.html',
+  selector: 'nuoruo-test-form-input-number',
+  templateUrl: './input-number.component.html',
   providers: []
 })
-export class NuoruoTestFormInputComponent implements OnInit, AfterViewInit {
+export class NuoruoTestFormInputNumberComponent implements OnInit, AfterViewInit {
   value = '1'
   ngAfterViewInit(): void {
   }
