@@ -12,12 +12,14 @@ import { NuoruoDateComponent } from './component/date/nuoruo-date.component';
 import { NuoruoSelectComponent } from './component/select/nuoruo-select.component';
 import { NuoruoOptionComponent } from './component/select/option/nuoruo-option.component';
 import { NuoruoNumberComponent } from './component/number/nuoruo-number.component';
+import { NuoruoTextareaComponent } from './component/textarea/nuoruo-textarea.component';
 const components = [
   NuoruoInputComponent,
   NuoruoDateComponent,
   NuoruoSelectComponent,
   NuoruoOptionComponent,
-  NuoruoNumberComponent
+  NuoruoNumberComponent,
+  NuoruoTextareaComponent
   // nuoruoTextareaComponent,
   // nuoruoSelectComponent,
   // nuoruoOptionComponent,
