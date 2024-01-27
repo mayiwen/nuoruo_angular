@@ -1,0 +1,19 @@
+:host {
+    height: 100%;
+    width: 100%;
+    
+    .grid-box {
+        height: 100%;
+        width: 100%;
+        display: grid;  
+        grid-gap: 4px 4px;
+        background-color: white;
+    }
+    div {
+        background-color: #eee;
+    }
+    div:nth-of-type(2) {
+        background-color: skyblue;
+        opacity: 0.9;
+    }
+}

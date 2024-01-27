@@ -13,8 +13,9 @@ import { NuoruoModalModule } from './modal/nuoruo-modal.module';
 import { NuoroAlertModule } from './alert/nuoruo-alert.module';
 import { NuoruoTreeModule } from './tree/nuoruo-tree.module';
 import { NuoruoTooltipModule } from './tooltip/nuoruo-tooltip.module';
+import { NuoruoGridModule } from './grid/nuoruo-grid.module';
 const module = [NuoruoLoadingModule, NuoruoButtonModule, NuoruoTabsModule, NuoruoIconModule, NuoruoPageModule, NuoruoInputModule, NuoruoTableModule, NuoruoMessageModule,
-  NuoruoModalModule, NuoroAlertModule, NuoruoTreeModule, NuoruoTooltipModule]
+  NuoruoModalModule, NuoroAlertModule, NuoruoTreeModule, NuoruoTooltipModule, NuoruoGridModule]
 const components: any[] = [
 ];
 const directive = [
