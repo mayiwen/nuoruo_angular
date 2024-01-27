@@ -1,3 +1,4 @@
+@import '../../../../../assets/nuoruo_style/handle.scss';
 :host {
     height: 100%;
     width: 100%;
@@ -7,13 +8,15 @@
         width: 100%;
         display: grid;  
         grid-gap: 4px 4px;
-        background-color: white;
+        // background-color: white;
+        @include bc('bc')
     }
     div {
-        background-color: #eee;
+        @include bc('boxBc')
     }
     div:nth-of-type(2) {
-        background-color: skyblue;
+        // background-color: skyblue;
+        @include bc('active');
         opacity: 0.9;
     }
 }

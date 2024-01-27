@@ -4,6 +4,7 @@ import { NuoruoMessageService } from '../../../component/message/service/nuoruo-
 @Component({
   selector: 'nuoruo-test-grid',
   templateUrl: './grid.component.html',
+  styleUrl: './grid.component.scss',
   providers: []
 })
 export class NuoruoTestGridComponent implements OnInit, AfterViewInit {
