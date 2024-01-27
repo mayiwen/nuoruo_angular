@@ -18,6 +18,8 @@ export class NuoruoButtonComponent {
   @Input('minWidth') minWidth = ''
   // 是否显示外框线
   @Input('noBorder') noBorder: boolean = false
+  // 是否显示外框线
+  @Input('title') title: string = ''
   @Input('') 
   ngOnInit() {
   }

@@ -7,10 +7,11 @@
   min-width: 300px;
   max-width: 500px;
   transform: translateY(-100%);
-  @include border("mainBorder");
-  background-color: black;
+  @include border("border");
+  @include bc("bc");
   opacity: 0.9;
-  color: white;
+
+  // color: white;
   border-radius: 5px;
   padding: 3px;
 }

@@ -79,3 +79,9 @@
   @include bc("bc");
   @include c("color");
 }
+.nuoruo-elipse {
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 隐藏超出部分 */
+  text-overflow: ellipsis; /* 使用省略号表示被省略的内容 */
+}
+
