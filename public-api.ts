@@ -1,3 +1,5 @@
+export { Debounce, Throttle } from './src/app/nuoruo/util/debounce-throttle'
+
 export { NuoruoDragComponent } from './src/app/nuoruo/module/layout/drag/nuoruo-drag.component'
 export { NuoruoDragModule } from './src/app/nuoruo/module/layout/drag/nuoruo-drag.module'
 export { NuoruoLayoutModule } from './src/app/nuoruo/module/layout/nuoruo-layout.module'
