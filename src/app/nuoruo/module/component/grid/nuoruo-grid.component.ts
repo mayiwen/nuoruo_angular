@@ -86,17 +86,19 @@ export class NuoruoGridComponent
   getresize() {
     console.log('这是打印的gridList')
      /* 获取当前元素的高 */
-     let screenHeight: number = this.gridBox.nativeElement.offsetHeight
+     let screenHeight: number = Math.floor(this.gridBox.nativeElement.offsetHeight) - 4
      /* 获取当前元斯的宽 */
-     let screenWidth: number = this.gridBox.nativeElement.offsetWidth
- 
+     let screenWidth: number = Math.floor(this.gridBox.nativeElement.offsetWidth) - 4
+    console.log(screenHeight)
+    console.log(screenWidth)
      let h  = Math.floor(screenHeight / 44)
      let h1 = screenHeight % 44
      if (h1 >= 40) h = h + 1
      let w  = Math.floor(screenWidth / 44)
-     let w1 = screenHeight % 44
+     let w1 = screenWidth % 44
      if (w1 >= 40) w = w + 1
- 
+     console.log(h)
+     console.log(w)
      let arrHeight = []
      let arrWidth = []
      for (let index = 1; index <= h; index++) {
@@ -105,6 +107,8 @@ export class NuoruoGridComponent
      for (let index = 1; index <= w; index++) {
        arrWidth.push(index)
      }
+     console.log(arrHeight)
+     console.log(arrWidth)
      this.arrHeight = arrHeight
      this.arrWidth = arrWidth
      this.cdr.detectChanges()

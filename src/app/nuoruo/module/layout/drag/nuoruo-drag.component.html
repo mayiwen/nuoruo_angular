@@ -1,6 +1,6 @@
-<div [class]="'move' + zIndex % 10" (drag)="drag($event)" (dragstart)="dragStart($event)" #dragRef draggable="true"
+<div [class]="'move' + zIndex % 10" (drag)="drag($event)" (dragstart)="dragStart($event)" #dragRef draggable="true" (resize)="divResize()"
     [ngStyle]="{'z-index': zIndex}" [ngClass]="{position: position, 'drag-box': true}">
-    <div class="header"><span >{{position && v ? v : position ? v : v}}</span>
+    <div class="header"> <span >{{position && v ? v : position ? v : v}}</span>
         <nr-button class="close" (click)="closeEmit()">关闭</nr-button>
         <nr-button class="close" (click)="position = !position">
             <nr-icon icon="icon-pushpin-fill" [h]="18"></nr-icon>

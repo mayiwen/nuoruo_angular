@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NuoruoAlertService } from '../../../component/alert/service/nuoruo-alert.service';
 import { NuoruoMessageService } from '../../../component/message/service/nuoruo-message.service';
+import { NuoruoGridComponent } from '../../../component/grid/nuoruo-grid.component';
 @Component({
   selector: 'nuoruo-test-grid',
   templateUrl: './grid.component.html',
@@ -8,7 +9,7 @@ import { NuoruoMessageService } from '../../../component/message/service/nuoruo-
   providers: []
 })
 export class NuoruoTestGridComponent implements OnInit, AfterViewInit {
-
+  @ViewChild('grid') grid!: NuoruoGridComponent
   ngAfterViewInit(): void {
   }
   ngOnInit(): void {
@@ -26,6 +27,9 @@ export class NuoruoTestGridComponent implements OnInit, AfterViewInit {
         this.message.show('点击了确定按钮')
       }
     })
+  }
+  dragEnd() {
+    this.grid.getresize()
   }
 
 }
