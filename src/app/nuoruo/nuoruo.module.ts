@@ -22,7 +22,7 @@ let commonModule = [
 ]
 @NgModule({
   declarations: [...components],
-  exports: [components, ...module],
+  exports: [...components, ...module],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoColorModule, ...module],
   bootstrap: [],
   providers: [],
