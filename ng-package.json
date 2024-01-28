@@ -6,7 +6,7 @@
     "assets": [
       "./src/assets/nuoruo_style/theme.scss",
       "./src/assets/nuoruo_style/index.scss",
-      "./src/assets/nuoruo_style/font/ngzorro/iconfont.js"
+      "./src/assets/font/ngzorro/iconfont.js"
 
     ],
     "allowedNonPeerDependencies": [
