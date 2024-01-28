@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NuoruoDragService } from './service/nuoruo-drag.service';
+import { Throttle } from '../../../util/debounce-throttle';
 @Component({
   selector: 'nr-drag',
   templateUrl: './nuoruo-drag.component.html',
@@ -96,6 +97,7 @@ export class NuoruoDragComponent
     console.log(e)
     console.log('开始拖动打印结束')
   }
+  @Throttle(100)
   drag(e: any) {
     var x = e.pageX;
     var y = e.pageY;
