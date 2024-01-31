@@ -18,8 +18,10 @@ export class NuoruoButtonComponent {
   @Input('minWidth') minWidth = ''
   // 是否显示外框线
   @Input('noBorder') noBorder: boolean = false
-  // 是否显示外框线
+  // 标题
   @Input('title') title: string = ''
+  // 是否显示外框线
+  @Input() group: boolean = false
   /** 是否圆角 
    * reaius 四个角都是圆角
    * left 左边的两个角是圆角

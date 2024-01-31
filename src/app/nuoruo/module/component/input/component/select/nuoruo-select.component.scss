@@ -1,3 +1,4 @@
+@import '../../../../../../../assets/nuoruo_style/index.scss';
 :host {
   .select {
     position: relative;
@@ -18,5 +19,6 @@
     left: 0;
     transform: translateY(100%);
     z-index: 10000;
+    @include border('border')
   }
 }

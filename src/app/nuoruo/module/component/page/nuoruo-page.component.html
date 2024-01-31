@@ -1,35 +1,35 @@
-<nr-button minWidth="26" [disabled]="page <= 1" (click)="changePageFn(1)">首页</nr-button>
-<nr-button minWidth="26" [disabled]="page <= 1" (click)="changePageFn(page - 1)">&lt;</nr-button>
+<nr-button minWidth="26" [disabled]="page <= 1" radius="left" (click)="changePageFn(1)">首页</nr-button>
+<nr-button minWidth="26" [disabled]="page <= 1" radius="none" [group]="true"  (click)="changePageFn(page - 1)">&lt;</nr-button>
 <!-- <ng-container *ngIf="page - 5 > 0">
     <nr-button (click)="changePageFn(page - 5)">...</nr-button>
 </ng-container> -->
 <ng-container *ngIf="page - 4 > 0">
-    <nr-button minWidth="26" (click)="changePageFn(page - 4)">{{page - 4}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page - 4)" radius="none" [group]="true" >{{page - 4}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page - 3 > 0">
-    <nr-button minWidth="26" (click)="changePageFn(page - 3)">{{page - 3}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page - 3)" radius="none" [group]="true" >{{page - 3}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page - 2 > 0">
-    <nr-button minWidth="26" (click)="changePageFn(page - 2)">{{page - 2}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page - 2)" radius="none" [group]="true" >{{page - 2}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page - 1 > 0">
-    <nr-button minWidth="26" (click)="changePageFn(page - 1)">{{page - 1}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page - 1)" radius="none" [group]="true" >{{page - 1}}</nr-button>
 </ng-container>
-<nr-button minWidth="26" (click)="changePageFn(page)" [active]="true">{{page}}</nr-button>
+<nr-button minWidth="26" (click)="changePageFn(page)" [active]="true" radius="none" [group]="true" >{{page}}</nr-button>
 <ng-container *ngIf="page + 1 <= pageTotal">
-    <nr-button minWidth="26" (click)="changePageFn(page + 1)">{{page + 1}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page + 1)" radius="none" [group]="true" >{{page + 1}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page + 2 <= pageTotal">
-    <nr-button minWidth="26" (click)="changePageFn(page + 2)">{{page + 2}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page + 2)" radius="none" [group]="true" >{{page + 2}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page + 3 <= pageTotal">
-    <nr-button minWidth="26" (click)="changePageFn(page + 3)">{{page + 3}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page + 3)" radius="none" [group]="true" >{{page + 3}}</nr-button>
 </ng-container>
 <ng-container *ngIf="page + 4 <= pageTotal">
-    <nr-button minWidth="26" (click)="changePageFn(page + 4)">{{page + 4}}</nr-button>
+    <nr-button minWidth="26" (click)="changePageFn(page + 4)" radius="none" [group]="true" >{{page + 4}}</nr-button>
 </ng-container>
-<nr-button minWidth="26" [disabled]="page + 1 > pageTotal" (click)="changePageFn(page + 1)">&gt;</nr-button>
-<nr-button minWidth="26" [disabled]="page >= pageTotal" (click)="changePageFn(pageTotal)">尾页</nr-button>
+<nr-button minWidth="26" [disabled]="page + 1 > pageTotal"  (click)="changePageFn(page + 1)" radius="none" [group]="true" >&gt;</nr-button>
+<nr-button minWidth="26" [disabled]="page >= pageTotal" (click)="changePageFn(pageTotal)" radius="right" [group]="true" >尾页</nr-button>
 
 <nr-input reg="/^[1-9]\d*$/" [(ngModel)]="jumpPage" ></nr-input>
 <nr-button (click)="jumpPageFn()">跳页</nr-button>

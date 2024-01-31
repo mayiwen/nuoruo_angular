@@ -4,7 +4,7 @@ import { NuoruoInputComponent } from '../../nuoruo-input.component';
 @Component({
   selector: 'nr-number',
   templateUrl: './nuoruo-number.component.html',
-  styleUrls: ['./nuoruo-number.component.scss'],
+  styleUrls: ['../../nuoruo-input.component.scss', '../../common/style/common.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

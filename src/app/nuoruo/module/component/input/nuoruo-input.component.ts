@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
   selector: 'nr-input',
   templateUrl: './nuoruo-input.component.html',
-  styleUrls: ['./nuoruo-input.component.scss'],
+  styleUrls: ['./nuoruo-input.component.scss', './common/style/common.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -15,7 +15,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccessor {
   /** 父组件传过来的正则。 */
   @Input('reg') reg? = ''
-  @Input('w') w? = '100'
+  @Input('w') w? = 100
   @Input('placeholder') placeholder? = ''
   @Input('bold') bold: any
   @Input('name') name: any
@@ -25,6 +25,15 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
   _fathrData: string = ''
   /** 父组件传过的数据复制的一份数据。主要是为了不满足正则的时候，要恢复原来的内容。 */
   fatherDataCopy: string = ''
+  // 是否显示外框线
+  @Input() group: boolean = false
+  /** 是否圆角 
+   * reaius 四个角都是圆角
+   * left 左边的两个角是圆角
+   * right 右边的两个角是圆角
+   * none 非圆角
+  */
+  @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
   constructor() {
     
   }

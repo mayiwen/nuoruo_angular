@@ -13,6 +13,7 @@ import { NuoruoSelectComponent } from './component/select/nuoruo-select.componen
 import { NuoruoOptionComponent } from './component/select/option/nuoruo-option.component';
 import { NuoruoNumberComponent } from './component/number/nuoruo-number.component';
 import { NuoruoTextareaComponent } from './component/textarea/nuoruo-textarea.component';
+import { NuoruoIconModule } from '../icon/nuoruo-icon.module';
 const components = [
   NuoruoInputComponent,
   NuoruoDateComponent,
@@ -29,7 +30,7 @@ const components = [
 @NgModule({
   declarations: [...components],
   exports: [...components],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoButtonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NuoruoButtonModule, NuoruoIconModule],
   bootstrap: [],
   providers: [],
 })

@@ -1,5 +1,5 @@
 <div style="display: inline-block; position: relative;">
-  <nr-input w="200" [ngModel]="nowDateString" (click)="showDateSelect($event)"></nr-input>
+  <nr-input [w]="200" [ngModel]="nowDateString" (click)="showDateSelect($event)"></nr-input>
   <div class="dateBox" *ngIf="flagShow">
     <div style="text-align: center;">{{nowDateString}} 所选年份：{{selectYear}}</div>
     <ng-container *ngIf="selectPanel === 'd'">

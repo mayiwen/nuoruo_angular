@@ -1,4 +1,4 @@
 <div class="title">
-  <nr-button *ngFor="let item of tabsetList; let index = index" (click)="changeTab(index)" [active]="index === selectTab">{{item.v}}</nr-button>
+  <nr-button *ngFor="let item of tabsetList; let index = index" (click)="changeTab(index)" [active]="index === selectTab" [noBorder]="index !== selectTab">{{item.v}}</nr-button>
 </div>
 <ng-content select="nr-tab"></ng-content>

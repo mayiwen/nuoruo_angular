@@ -42,6 +42,15 @@ export class NuoruoSelectComponent implements  AfterViewInit, ControlValueAccess
   /** 父组件把ngModel传进来的时候绑定的值 */
   _fatherNgModel: any = {};
   data: any;
+  // 是否显示外框线
+  @Input() group: boolean = false
+  /** 是否圆角 
+   * reaius 四个角都是圆角
+   * left 左边的两个角是圆角
+   * right 右边的两个角是圆角
+   * none 非圆角
+  */
+  @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
   constructor(
     private cdr: ChangeDetectorRef,
   ) {

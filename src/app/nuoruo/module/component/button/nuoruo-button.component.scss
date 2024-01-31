@@ -27,12 +27,16 @@ button {
         @include c('active');
         @include bc('activeBc');
     }
-    
+    &.group {
+        margin-left: -1px;
+    }
 
 }
 
 :host button.noBorder {
     border: 1px solid transparent;
+}
+:host button.noBg {
     background-color: transparent ;
 }
 :host button.radius-left {
@@ -44,7 +48,7 @@ button {
 :host button.radius-none {
     border-radius: 0 0 0 0;
 }
-;
+
 
 :host {
     display: inline;

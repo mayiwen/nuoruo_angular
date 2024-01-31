@@ -4,4 +4,17 @@
 <nr-input placeholder="你好" [disabled]="true" [(ngModel)]="value"></nr-input>
 <nr-input [bold]="true" placeholder="你好" [disabled]="true" [(ngModel)]="value"></nr-input>
 
-<nr-input placeholder="只可以输入0-255" [(ngModel)]="value"  reg="/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|(25[0-5]))$/"></nr-input>
+<nr-input placeholder="只可以输入0-255" [(ngModel)]="value"
+    reg="/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|(25[0-5]))$/"></nr-input>
+<nr-gap></nr-gap>
+按钮组
+<nr-number placeholder="你好" [(ngModel)]="value" radius="left"></nr-number>
+<nr-input placeholder="你好" [(ngModel)]="value" radius="right" [group]="true"></nr-input>
+
+<div>
+    <nr-gap [w]="4"></nr-gap> <nr-select [(ngModel)]="h" (inputChange)="inputChange($event)" name="selectForm" radius="left" [group]="true" [w]="70">
+        <nr-option [o]="item" v="v" value="value" *ngFor="let item of arr;" ></nr-option>
+    </nr-select> <nr-input placeholder="你好"  [w]="700"
+    
+        [(ngModel)]="value" radius="none" [group]="true"></nr-input><nr-button [group]="true" radius="right" w="70">你好</nr-button>
+</div>
