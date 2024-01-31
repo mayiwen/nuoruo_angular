@@ -20,7 +20,13 @@ export class NuoruoButtonComponent {
   @Input('noBorder') noBorder: boolean = false
   // 是否显示外框线
   @Input('title') title: string = ''
-  @Input('') 
+  /** 是否圆角 
+   * reaius 四个角都是圆角
+   * left 左边的两个角是圆角
+   * right 右边的两个角是圆角
+   * none 非圆角
+  */
+  @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
   ngOnInit() {
   }
 }
