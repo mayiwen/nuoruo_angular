@@ -27,13 +27,24 @@ button {
         @include c('active');
         @include bc('activeBc');
     }
+    
 
 }
 
 :host button.noBorder {
     border: 1px solid transparent;
-    background-color: transparent;
+    background-color: transparent ;
 }
+:host button.radius-left {
+    border-radius: 4px 0 0 4px;
+}
+:host button.radius-right {
+    border-radius: 0 4px 4px 0;
+}
+:host button.radius-none {
+    border-radius: 0 0 0 0;
+}
+;
 
 :host {
     display: inline;

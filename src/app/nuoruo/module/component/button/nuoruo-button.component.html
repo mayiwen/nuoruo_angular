@@ -1,6 +1,6 @@
 <button
   [disabled]="disabled || loading"
-  [ngClass]="{ active: active, noBorder: noBorder, 'nuoruo-elipse': true }"
+  [ngClass]="{ active: active, noBorder: noBorder, 'nuoruo-elipse': true, 'radius-left': radius === 'left', 'radius-right': radius === 'right', 'radius-none': radius === 'none',  }"
   [ngStyle]="{ width: w + 'px', minWidth: minWidth + 'px' }"
   [title]="title"
 >
