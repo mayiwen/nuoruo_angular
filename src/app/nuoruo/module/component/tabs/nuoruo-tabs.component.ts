@@ -26,8 +26,13 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
   set fatherNgModel(data: any) {
     this._fatherNgModel = data;
   }
-
+  
+  
   ngOnInit(): void {
+  }
+
+  reload() {
+    this.ngAfterViewInit()
   }
   changeTab(index: any) {
     this.selectTab = index;

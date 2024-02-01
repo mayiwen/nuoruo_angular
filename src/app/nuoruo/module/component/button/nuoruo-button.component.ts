@@ -14,6 +14,8 @@ export class NuoruoButtonComponent {
   @Input('active') active: boolean = false
   /** 设置默认的宽度 */
   @Input('w') w = ''
+  /** 设置默认的宽度 */
+  @Input() h = ''
   /** 设置一个最小宽度 */
   @Input('minWidth') minWidth = ''
   // 是否显示外框线
