@@ -20,6 +20,8 @@ export class NuoruoButtonComponent {
   @Input('minWidth') minWidth = ''
   // 是否显示外框线
   @Input('noBorder') noBorder: boolean = false
+  // 是否显示外框线
+  @Input('noBg') noBg: boolean = false
   // 标题
   @Input('title') title: string = ''
   // 是否显示外框线
