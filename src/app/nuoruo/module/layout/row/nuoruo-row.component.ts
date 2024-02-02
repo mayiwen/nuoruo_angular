@@ -37,7 +37,7 @@ export class NuoruoRowComponent implements AfterViewInit, OnChanges{
   }
   ngAfterViewInit(): void {
     let account = 0
-    this.colList.forEach(item => {
+    this.colList && this.colList.forEach(item => {
       account = account + item.span
       if (account === this.total) {
         item.flagShowSpan = false
