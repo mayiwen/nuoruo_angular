@@ -1,7 +1,7 @@
 <button [disabled]="disabled || loading"
   [ngClass]="{ active: active, noBorder: noBorder, noBg: noBg,'nuoruo-elipse': true, 
     'radius-left': radius === 'left', 'radius-right': radius === 'right', 'radius-none': radius === 'none', 'group': group  }"
-  [ngStyle]="{ width: w + 'px', minWidth: minWidth + 'px', height: h + 'px' }" [title]="title">
+  [ngStyle]="{ width: _width, minWidth: minWidth + 'px', height: h + 'px' }" [title]="title">
   <nr-loading w="24px" *ngIf="loading"></nr-loading>
   <ng-content></ng-content>
 </button>

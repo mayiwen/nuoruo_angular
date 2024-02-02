@@ -1,6 +1,6 @@
 <ng-container *ngFor="let item of colList; let index = index">
     <div class="context"
-        [ngStyle]="{width: 'calc((100% - ' + (total - 1) * gutter + 'px)/'+total+ '*'+item.span+' + ' + gutter * (item.span - 1) +'px)'}">
+        [ngStyle]="{width: 'calc((100% - ' + (total - 1) * gutter + 'px)/'+total+ '*'+item.span+' + ' + gutter * (item.span - 1) +'px)', margin: margin}">
         <ng-container [ngTemplateOutlet]="item.templateRef"></ng-container>
     </div>
     <div class="gap" *ngIf="colList.length - 1 !== index && item.flagShowSpan" [ngStyle]="{width: gutter + 'px'}"></div>

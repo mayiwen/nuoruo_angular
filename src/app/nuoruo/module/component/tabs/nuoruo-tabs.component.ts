@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, OnInit, Output, QueryList, ViewChild, ViewChildren, forwardRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, OnChanges, OnInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NuoruoTabComponent } from './tab/nuoruo-tab.component';
 @Component({
@@ -20,6 +20,7 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
   constructor( private cdr: ChangeDetectorRef ) {
 
   }
+
   get fatherNgModel() {
     return this._fatherNgModel;
   }

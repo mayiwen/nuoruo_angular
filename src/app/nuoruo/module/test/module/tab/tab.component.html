@@ -35,7 +35,8 @@ data: any 你可以在 nr-tab 绑定任意数据。以方便 tabClick 取用的�
     <nr-tab v="标签4">4</nr-tab>
 </nr-tabs> -->
 
-
+<h2>特殊处理</h2> 
+如果tab的元素是延迟或动态加载的内容。请重新调用ngAfterViewInit() 使之生效
 
 <nr-tabs #tabs >
     <nr-tab  *ngFor="let item of arr;" [v]="item">

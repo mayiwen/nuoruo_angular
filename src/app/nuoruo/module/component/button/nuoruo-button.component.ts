@@ -15,6 +15,8 @@ export class NuoruoButtonComponent {
   /** 设置默认的宽度 */
   @Input('w') w = ''
   /** 设置默认的宽度 */
+  @Input('widthPercent') widthPercent = ''
+  /** 设置默认的宽度 */
   @Input() h = ''
   /** 设置一个最小宽度 */
   @Input('minWidth') minWidth = ''
@@ -33,7 +35,15 @@ export class NuoruoButtonComponent {
    * none 非圆角
   */
   @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
+  _width: string = ''
   ngOnInit() {
+      this._width = this.widthPercent ? this.widthPercent : this.w + 'px'
+    // if (this.w && this.w >= 1) {
+    //   this._width = 'calc(100% - ' + this.top + 'px)';
+    // } else {
+    //   if (!this.top) this.top = 0
+    //   this.heightStr = (1 - this.top) * 100 + '%'
+    // }
   }
 }
  
