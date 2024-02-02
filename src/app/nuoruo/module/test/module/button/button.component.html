@@ -16,82 +16,8 @@ loading按钮:<nr-button [loading]="true">你好</nr-button><br>
 <br>
 配合栅格布局中以百分比参与布局 通过 上方加减模拟动态布局 
 <nr-row [total]="total" #rowRef margin="2px 0 2px 0">
-    <ng-template nrCol [span]="1">
+    <ng-template nrCol [span]="1" *ngFor="let item of list;">
         <nr-button widthPercent="100%" style="margin-bottom: 10px;"> 1/{{total}} </nr-button>
     </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
-    <ng-template nrCol [span]="1">
-        <nr-button widthPercent="100%"> 1/{{total}} </nr-button>
-    </ng-template>
+  
 </nr-row>

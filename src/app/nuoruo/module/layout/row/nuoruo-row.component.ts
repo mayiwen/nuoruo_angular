@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ContentChildren,
   Input,
@@ -25,7 +26,7 @@ export class NuoruoRowComponent implements AfterViewInit, OnChanges{
   @Input() h: any;
   @Input() style: any = {};
   _style = {}
-  constructor() {
+  constructor(private cdr: ChangeDetectorRef) {
 
   }
 
@@ -37,19 +38,22 @@ export class NuoruoRowComponent implements AfterViewInit, OnChanges{
   }
   ngAfterViewInit(): void {
     let account = 0
-    this.colList && this.colList.forEach(item => {
+    this.colList && this.colList.forEach((item, index) => {
       account = account + item.span
       if (account === this.total) {
+        console.log(index, false)
         item.flagShowSpan = false
         account = 0
       } else {
         if (account > this.total) {
           account = item.span
         } else {
+          console.log(index, true)
           item.flagShowSpan = true
         }
       }
     })
+    this.cdr.detectChanges()
   }
   get height() {
     return this.h
