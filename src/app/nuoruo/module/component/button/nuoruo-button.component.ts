@@ -35,6 +35,8 @@ export class NuoruoButtonComponent {
    * none 非圆角
   */
   @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
+  // 标题
+  @Input() color: string = ''
   _width: string = ''
   ngOnInit() {
       this._width = this.widthPercent ? this.widthPercent : this.w + 'px'

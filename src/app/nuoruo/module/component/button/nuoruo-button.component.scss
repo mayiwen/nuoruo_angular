@@ -30,6 +30,36 @@ button {
     &.group {
         margin-left: -1px;
     }
+    &.red {
+        @include bc('redDefault');
+        @include white { color: white}
+        @include black { color: white}
+        
+    }
+    &.red:hover {
+        @include bc('redHover');
+        
+    }
+    &.yellow {
+        @include bc('yellowDefault');
+        @include white { color: white}
+        @include black { color: white}
+        
+    }
+    &.yellow:hover {
+        @include bc('yellowHover');
+        
+    }
+    &.blue {
+        @include bc('blueDefault');
+        @include white { color: white}
+        @include black { color: white}
+        
+    }
+    &.blue:hover {
+        @include bc('blueHover');
+        
+    }
 
 }
 
@@ -49,6 +79,12 @@ button {
     border-radius: 0 0 0 0;
 }
 
+// :host>button.red {
+//     @include bc('red');
+//     // background-color: red!important;
+//     color: white;
+//     border: transparent;
+// }
 
 :host {
     display: inline;

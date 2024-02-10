@@ -13,9 +13,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccessor {
+  /* 基础类 */
+  @Input('w') w? = 100
+  @Input('type') type?: string = ''
   /** 父组件传过来的正则。 */
   @Input('reg') reg? = ''
-  @Input('w') w? = 100
   @Input('placeholder') placeholder? = ''
   @Input('bold') bold: any
   @Input('name') name: any
