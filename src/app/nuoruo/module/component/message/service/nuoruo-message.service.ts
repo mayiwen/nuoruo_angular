@@ -24,7 +24,7 @@ export class NuoruoMessageService {
 
   // Previous dynamic-loading method required you to set up infrastructure
   // before adding the popup to the DOM.
-  private showAsComponent(message: string) {
+  private showAsComponent(message: string, type?: string) {
     if (!this.popup) {
       // Create element
       this.popup = document.createElement('popup-component');
@@ -47,11 +47,13 @@ export class NuoruoMessageService {
       });
 
       // Set the message
+      this.popupComponentRef.instance.type = type;
       this.popupComponentRef.instance.message = message;
 
       // Add to the DOM
       document.body.appendChild(this.popup);
     } else {
+      this.popupComponentRef.instance.type = type;
       this.popupComponentRef.instance.message = message;
       
     }
@@ -63,5 +65,8 @@ export class NuoruoMessageService {
   }
   err(message: any) {
     this.showAsComponent(message)
+  }
+  showTop(message: any) {
+    this.showAsComponent(message,  'top')
   }
 }

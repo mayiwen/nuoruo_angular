@@ -31,8 +31,7 @@ import {
   ],
 })
 export class NuoruoMessageComponent implements  AfterViewInit, OnDestroy {
-  @Output()
-  closed = new EventEmitter<void>();
+  @Output() closed = new EventEmitter<void>();
   /** 是否是第一次 */
   flagFirst: boolean = true
   arr = [
@@ -58,9 +57,16 @@ export class NuoruoMessageComponent implements  AfterViewInit, OnDestroy {
   }
   set message(message: string) {
     this._message = message;
-    if (this.arr.length > 2)  {
-      this.arr.shift()
+    if (this.type === 'top'){
+      if (this.arr.length > 0)  {
+        this.arr.shift()
+      }
+    } else {
+      if (this.arr.length > 2)  {
+        this.arr.shift()
+      }
     }
+    
     this.arr.push({message})
     this.state = 'opened';
     if (this.flagFirst) {
@@ -72,6 +78,7 @@ export class NuoruoMessageComponent implements  AfterViewInit, OnDestroy {
   shiftMessage() {
     if (this.timerShiftMessage) clearTimeout(this.timerShiftMessage);
     this.timerShiftMessage =  setTimeout(() => {
+      clearTimeout(this.timerShiftMessage)
       if (this.arr.length > 0) {
         this.arr.shift()
         this.shiftMessage()

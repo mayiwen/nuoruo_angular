@@ -1,4 +1,7 @@
-<div *ngFor="let item of arr;" style="margin-top: 5px;"> 
-  {{item.message}}
-</div>
 
+
+<div class="message-box"  [ngStyle]="{top: type === 'top' ? '-9px' : '40px'}">
+  <div *ngFor="let item of arr;" style="margin-bottom: 3px;"> 
+    {{item.message}}
+  </div>
+</div>

@@ -17,6 +17,10 @@ export class NuoruoTestMessageComponent implements OnInit, AfterViewInit {
     this.message.show('你好')
     
   }
+  showTop() {
+    this.message.showTop('你好')
+    
+  }
 
 
 }
