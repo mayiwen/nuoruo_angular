@@ -12,7 +12,9 @@
     background-color: #333; // box b  ackground
     .box2 {
       border: 1px solid #555; // box border 
-      background-color: #444; // box b  ackground
+      background-color: #3a3a3a; // box b  ackground
+      padding: 5px;
+
     }
     input {
       border: 1px solid #555; // box border 
@@ -31,6 +33,7 @@
     .box2 {
       border: 1px solid #ccc; // box border 
       background-color: #eee; // box b  ackground
+      padding: 5px;
     }
     input {
       border: 1px solid #ccc; // box border 
@@ -42,7 +45,7 @@
 .box {
   margin: 10px;
   height: 100px;
-  width: 200px;
+  width: 80px;
   padding: 4px;
   border-radius: 4px;
   input {
