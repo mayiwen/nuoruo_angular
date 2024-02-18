@@ -10,6 +10,7 @@
     [ngClass]="{bold: bold, novalue: _fathrData, disabled: disabled, 'radius-left': radius === 'left', 'radius-right': radius === 'right', 'radius-none': radius === 'none', 'group': group }"
     [name]="name"
     [disabled]="disabled ? true : false"
+    spellcheck="false"
     />
     <!-- [placeholder]="placeholder"     class="bold" -->
   <label *ngIf="bold">{{placeholder}}</label>
