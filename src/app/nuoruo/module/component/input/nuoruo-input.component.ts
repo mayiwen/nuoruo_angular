@@ -68,6 +68,8 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
   change = (value:any) => {}
 
   ngAfterViewInit(): void {
+    console.log('这是input')
+    console.log(this.type)
   }
   changeValue(e: any, input:any) {
     if (this.fatherData) {

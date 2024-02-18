@@ -1,7 +1,7 @@
 
 <div class="nuoruo-input-box" >
     <input
-    type="text"
+    [type]="type ? type : 'text'"
     #input1
     [(ngModel)]="fatherData"
     (ngModelChange)="changeValue($event, input1)"
