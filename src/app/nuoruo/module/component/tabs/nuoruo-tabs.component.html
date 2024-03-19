@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div [ngClass]="{title: true,}">
   <!-- 多行模式 -->
   <ng-container *ngIf="!oneLine">
@@ -29,9 +28,5 @@
       </ng-container>
     </div>
   </ng-container>
-=======
-<div class="title">
-  <nr-button *ngFor="let item of tabsetList; let index = index" (click)="changeTab(index)" [active]="index === selectTab" [noBorder]="index !== selectTab">{{item.v}}</nr-button>
->>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
 </div>
 <ng-content select="nr-tab"></ng-content>

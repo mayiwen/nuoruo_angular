@@ -1,12 +1,8 @@
 <nr-gap></nr-gap>
 基础按钮:<nr-button>你好</nr-button><br>
 loading按钮:<nr-button [loading]="true">你好</nr-button><br>
-<<<<<<< HEAD
 
 禁用按钮:<nr-button [disabled]="flag">你好</nr-button><nr-button (click)="flag = !flag">禁用切换</nr-button><br> 
-=======
-禁用按钮:<nr-button [disabled]="true">你好</nr-button><br>
->>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
 无边框按钮  <nr-button [noBorder]="true">你好</nr-button><br>
 无底色按钮  <nr-button [noBg]="true">你好</nr-button><br>
 无边框底色按钮  <nr-button [noBorder]="true" [noBg]="true">你好</nr-button><br>
@@ -26,15 +22,8 @@ loading按钮:<nr-button [loading]="true">你好</nr-button><br>
 配合栅格布局中以百分比参与布局 通过 上方加减模拟动态布局 
 <nr-row [total]="total" #rowRef margin="2px 0 2px 0">
     <ng-template nrCol [span]="1" *ngFor="let item of list;">
-<<<<<<< HEAD
         <nr-button width="100%" style="margin-bottom: 10px;"> 1/{{total}} </nr-button>
     </ng-template>
 </nr-row>
 
 <p><nr-button maxWidth="20px">你好这是一个非常长的button按钮，现在我要把他只显示一部分。</nr-button> </p>
-=======
-        <nr-button widthPercent="100%" style="margin-bottom: 10px;"> 1/{{total}} </nr-button>
-    </ng-template>
-  
-</nr-row>
->>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a

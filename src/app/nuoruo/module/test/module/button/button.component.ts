@@ -13,11 +13,7 @@ export class NuoruoTestButtonComponent implements OnInit, AfterViewInit, OnDestr
   list: any[] = [1,2,3]
   $timer1?: any
   $timer2?: any
-<<<<<<< HEAD
   flag = false
-=======
-
->>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
  
   constructor(private cdr: ChangeDetectorRef){}
 
