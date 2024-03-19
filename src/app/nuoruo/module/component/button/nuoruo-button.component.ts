@@ -15,18 +15,29 @@ export class NuoruoButtonComponent {
   /** 设置默认的宽度 */
   @Input('w') w = ''
   /** 设置默认的宽度 */
+<<<<<<< HEAD
   @Input('width') width = ''
   /** 设置默认的宽度 */
   @Input() h = ''
+=======
+  @Input('widthPercent') widthPercent = ''
+  /** 设置默认的宽度 */
+  @Input() h = ''
+  /** 设置一个最小宽度 */
+  @Input('minWidth') minWidth = ''
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
   // 是否显示外框线
   @Input('noBorder') noBorder: boolean = false
     // 是否显示背景
   @Input('noBg') noBg: boolean = false
   // 标题
   @Input('title') title: string = ''
+<<<<<<< HEAD
   // 标题
   @Input('minWidth') minWidth: string = ''
   @Input('maxWidth') maxWidth: string = ''
+=======
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
   // 是否显示外框线
   @Input() group: boolean = false
   /** 是否圆角 
@@ -40,7 +51,17 @@ export class NuoruoButtonComponent {
   @Input() color: string = ''
   _width: string = ''
   ngOnInit() {
+<<<<<<< HEAD
       this._width = this.width ? this.width : this.w + 'px'
+=======
+      this._width = this.widthPercent ? this.widthPercent : this.w + 'px'
+    // if (this.w && this.w >= 1) {
+    //   this._width = 'calc(100% - ' + this.top + 'px)';
+    // } else {
+    //   if (!this.top) this.top = 0
+    //   this.heightStr = (1 - this.top) * 100 + '%'
+    // }
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
   }
 }
  

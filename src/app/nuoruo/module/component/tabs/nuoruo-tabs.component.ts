@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren, forwardRef } from '@angular/core';
+=======
+import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, OnChanges, OnInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren, forwardRef } from '@angular/core';
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NuoruoTabComponent } from './tab/nuoruo-tab.component';
 @Component({

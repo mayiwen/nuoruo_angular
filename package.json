@@ -1,6 +1,10 @@
 {
   "name": "nuoruo-angular",
+<<<<<<< HEAD
   "version": "0.0.25",
+=======
+  "version": "0.0.11",
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

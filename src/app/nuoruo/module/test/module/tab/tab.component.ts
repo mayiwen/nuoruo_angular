@@ -8,7 +8,10 @@ import { NuoruoTabsComponent } from '../../../component/tabs/nuoruo-tabs.compone
 export class NuoruoTestTabComponent implements OnInit, AfterViewInit {
   @Input() data: any
   @ViewChild('tabs') tabs!: NuoruoTabsComponent
+<<<<<<< HEAD
   @ViewChild('tabs2') tabs2!: NuoruoTabsComponent
+=======
+>>>>>>> e16dae768a71037cb447de3029bccdf755cbdd7a
   
 
   arr: any = []
