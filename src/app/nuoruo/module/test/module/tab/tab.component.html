@@ -1,5 +1,8 @@
 <nr-gap></nr-gap>
-
+<nr-tabs #tabs3 [flagShowIcon]="true" [oneLine]="true" (closeClick)="closeTab($event)" (tabClick)="clickFn($event)">
+    <nr-tab id="a" v="你好asdfasdfadfadfadsfadfasdfasdfasdfadfasdfasdfadsfadsfadf" img="https://mayiwen.com/favicon.ico" ></nr-tab>
+    <nr-tab id="d" v="d" img="111"></nr-tab>
+</nr-tabs>
 <h2>nr-tabs</h2>
 描述：多个tab的一个集合
 
@@ -28,11 +31,129 @@ data: any 你可以在 nr-tab 绑定任意数据。以方便 tabClick 取用的�
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/nt-template&gt; <br>
 &nbsp;&nbsp;&lt;/nt-tab&gt; <br>
 &lt;/nt-tabs&gt; <br>
-<nr-tabs (tabClick)="tabClickFn($event)">
+<!-- <nr-tabs (tabClick)="tabClickFn($event)">
     <nr-tab v="标签1" data="1">1</nr-tab>
     <nr-tab v="标签2">2</nr-tab>
     <nr-tab v="标签3">3</nr-tab>
     <nr-tab v="标签4">4</nr-tab>
+</nr-tabs> -->
+
+<h2>特殊处理</h2> 
+如果tab的元素是延迟或动态加载的内容。请重新调用ngAfterViewInit() 使之生效
+
+<nr-tabs #tabs >
+    <nr-tab  *ngFor="let item of arr;" [v]="item">
+        <nr-button *ngFor="let item2 of arr2;">{{item2}}</nr-button>    
+    </nr-tab>
 </nr-tabs>
 
+<nr-button (click)="selectB()">选择id为b的标签</nr-button>
+<nr-tabs #tabs2>
+    <nr-tab v="你好" id="a"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+</nr-tabs>
 
+<nr-tabs #tabs3 [flagShowIcon]="true"  [oneLine]="false">
+    <nr-tab id="a" v="你好asdfasdfadfadfadsfadfasdfasdfasdfadfasdfasdfadsfadsfadf"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+    <nr-tab id="b" v="b"></nr-tab>
+    <nr-tab id="c" v="c"></nr-tab>
+    <nr-tab id="d" v="d"></nr-tab>
+</nr-tabs>

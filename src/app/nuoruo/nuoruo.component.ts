@@ -12,14 +12,4 @@ export class NuoruoComponent implements OnInit, AfterViewInit {
   }
   ngOnDestroy() {
   }
-  changeTheme() {
-    console.log(window.document.documentElement.getAttribute('data-myw-theme'))
-    if (window.document.documentElement.getAttribute('data-myw-theme') === 'black') {
-      window.document.documentElement.setAttribute('data-myw-theme', 'white');
-    } else {
-      window.document.documentElement.setAttribute('data-myw-theme', 'black');
-    }
-  }
-
-
 }

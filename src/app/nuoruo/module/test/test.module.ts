@@ -11,6 +11,16 @@ import { NuoruoTestTabModule } from './module/tab/tab.module';
 import { NuoruoTestSplitModule } from './module/split/split.module';
 import { NuoruoTestPageModule } from './module/page/page.module';
 import { NuoruoTestFormModule } from './module/form/form.module';
+import { NuoruoTestButtonModule } from './module/button/button.module';
+import { NuoruoTestTableModule } from './module/table/table.module';
+import { NuoruoTestMessgaeModule } from './module/message/messge.module';
+import { NuoruoTestModalModule } from './module/modal/modal.module';
+import { NuoruoTestAlertModule } from './module/alert/alert.module';
+import { NuoruoTestRowModule } from './module/row/row.module';
+import { NuoruoTestDragModule } from './module/drag/drag.module';
+import { NuoruoTestTreeModule } from './module/tree/tree.module';
+import { NuoruoTestTooltipModule } from './module/tooltip/tooltip.module';
+import { NuoruoTestGridModule } from './module/grid/grid.module';
 
 const module: any[] = [
   NuoruoComponentModule,
@@ -19,7 +29,9 @@ const module: any[] = [
   NuoruoTestGapModule,
   NuoruoTestIconModule,
   NuoruoTestTabModule,
-  NuoruoTestSplitModule,NuoruoTestPageModule,NuoruoTestFormModule
+  NuoruoTestSplitModule,NuoruoTestPageModule,NuoruoTestFormModule,
+  NuoruoTestButtonModule, NuoruoTestTableModule, NuoruoTestMessgaeModule,NuoruoTestModalModule,NuoruoTestAlertModule, NuoruoTestRowModule,NuoruoTestDragModule,
+  NuoruoTestTreeModule, NuoruoTestTooltipModule, NuoruoTestGridModule
 ]
 const components: any[] = [
   NuoruoTestComponent

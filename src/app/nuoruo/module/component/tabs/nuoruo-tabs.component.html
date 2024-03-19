@@ -1,4 +1,32 @@
-<div class="title">
-  <nr-button *ngFor="let item of tabsetList; let index = index" (click)="changeTab(index)" [active]="index === selectTab">{{item.v}}</nr-button>
+<div [ngClass]="{title: true,}">
+  <!-- 多行模式 -->
+  <ng-container *ngIf="!oneLine">
+    <ng-container *ngFor="let item of tabsetList; let index = index">
+      <nr-button (click)="changeTab(index)" [active]="index === selectTab" (dblclick)="dlbTabClickFn(index)" [noBg]="false"
+        (contextmenu)="contextmenuTabClickFn(index)" [noBorder]="index !== selectTab">
+        {{item.v}}
+        <ng-container *ngIf="flagShowIcon">&nbsp;&nbsp;</ng-container>
+        <nr-icon icon="icon-close" style="position: absolute; right: 0; top: 0" [w]="14" *ngIf="flagShowIcon" 
+          (click)="iconCloseClick($event, item)" title="关闭"></nr-icon>
+        <ng-container *ngIf="flagShowIcon">&nbsp;&nbsp;</ng-container>
+      </nr-button>
+    </ng-container>
+  </ng-container>
+  <!-- 单行模式 -->
+  <ng-container *ngIf="oneLine">
+    <div style="height: 100%; width: 100; display: flex;">
+      <ng-container *ngFor="let item of tabsetList; let index = index">
+        <ng-container>
+          <div style=" overflow: hidden; white-space: nowrap;position: relative;" (click)="changeTab(index)"
+            (dblclick)="dlbTabClickFn(index)" (contextmenu)="contextmenuTabClickFn(index)" [ngClass]="{
+               flex1: true,
+              }"><nr-button [width]="'100%'" [active]="index === selectTab" [noBg]="index != selectTab">
+              <ng-container *ngIf="item.img"> <img [src]="item.img" class="img" (error)="item.img = ''"></ng-container>
+              {{item.v}} </nr-button> <nr-icon icon="icon-close" class="icon-class" [w]="14" *ngIf="flagShowIcon"
+              (click)="iconCloseClick($event, item)" title="关闭"></nr-icon> </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </ng-container>
 </div>
 <ng-content select="nr-tab"></ng-content>

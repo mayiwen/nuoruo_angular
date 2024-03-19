@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
   selector: 'nr-input',
   templateUrl: './nuoruo-input.component.html',
-  styleUrls: ['./nuoruo-input.component.scss'],
+  styleUrls: ['./nuoruo-input.component.scss', './common/style/common.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -13,19 +13,29 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccessor {
+  /* 基础类 */
+  @Input('w') w? = 100
+  @Input('type') type?: string = ''
   /** 父组件传过来的正则。 */
   @Input('reg') reg? = ''
-  @Input('w') w? = '100'
   @Input('placeholder') placeholder? = ''
   @Input('bold') bold: any
   @Input('name') name: any
+  /** 是否是disabled */
   @Input('disabled') disabled: boolean = false
   /** 父组件传过来的数据 */
   _fathrData: string = ''
-  /** 是否disabled */
-  flagDisabled: boolean = false
   /** 父组件传过的数据复制的一份数据。主要是为了不满足正则的时候，要恢复原来的内容。 */
   fatherDataCopy: string = ''
+  // 是否显示外框线
+  @Input() group: boolean = false
+  /** 是否圆角 
+   * reaius 四个角都是圆角
+   * left 左边的两个角是圆角
+   * right 右边的两个角是圆角
+   * none 非圆角
+  */
+  @Input() radius: 'radius' | 'left' | 'right' | 'none' = 'radius'
   constructor() {
     
   }
@@ -53,11 +63,13 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
     console.log('当前的元素被触发了。')
   }
   setDisabledState?(isDisabled: boolean): void {
-    this.flagDisabled = isDisabled
+    this.disabled = isDisabled
   }
   change = (value:any) => {}
 
   ngAfterViewInit(): void {
+    console.log('这是input')
+    console.log(this.type)
   }
   changeValue(e: any, input:any) {
     if (this.fatherData) {
@@ -69,9 +81,11 @@ export class NuoruoInputComponent implements  AfterViewInit, ControlValueAccesso
           if (res) {
             this.fatherData = e
             this.fatherDataCopy = this._fathrData ? JSON.parse(JSON.stringify(this._fathrData)) : ''
+            
           } else {
             this._fathrData = JSON.parse(JSON.stringify(this.fatherDataCopy))
             input.value = this._fathrData
+            this.fatherData = input.value
           }
         } catch(error) {
           this.fatherData = ''

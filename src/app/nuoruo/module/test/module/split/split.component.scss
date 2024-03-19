@@ -1,0 +1,8 @@
+@import '../../../../../../assets/nuoruo_style/index.scss';
+
+.append {
+  height: 100%;
+  width: 100%;
+  height: 500px; width: 500px; border: 1px solid red;
+  @include border("border");
+}

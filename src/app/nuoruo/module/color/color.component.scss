@@ -1,6 +1,6 @@
 .container > div {
     margin: 5px auto;
-    width: 100px;
+    width: 50px;
     height: 100px;
   }
 
@@ -8,10 +8,17 @@
   background-color: #242424; // 主背景 mainColor
   color: #ddd;
   .box {
-    border: 1px solid #444; // box border 
+    border: 1px solid #555; // box border 
     background-color: #333; // box b  ackground
+    .box2 {
+      border: 1px solid #555; // box border 
+      background-color: #3a3a3a; // box b  ackground
+      width: calc(100% - 8px);
+      margin-left: 2px;
+
+    }
     input {
-      border: 1px solid #444; // box border 
+      border: 1px solid #555; // box border 
       background-color: #242424;
       color: #ddd;
     }
@@ -24,6 +31,12 @@
   .box {
     border: 1px solid #ccc; // box border
     background-color: #f1f1f1; // box backgground
+    .box2 {
+      border: 1px solid #ccc; // box border 
+      background-color: #eee; // box b  ackground
+      width: calc(100% - 8px);
+      margin-left: 2px;
+    }
     input {
       border: 1px solid #ccc; // box border 
       background-color: #f7f7f7;
@@ -32,10 +45,11 @@
   }
 }
 .box {
-  margin: 10px;
+  // margin: 10px;
+  // margin: 2px;
+  margin-left: 4px;
   height: 100px;
-  width: 200px;
-  padding: 4px;
+  width: 80px;
   border-radius: 4px;
   input {
     height: 28px;

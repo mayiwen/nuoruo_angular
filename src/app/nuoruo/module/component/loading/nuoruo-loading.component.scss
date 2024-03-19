@@ -1,4 +1,4 @@
-@import '../../../../../assets/nuoruo_style/handle.scss';
+@import '../../../../../assets/nuoruo_style/index.scss';
 .box {
   position: relative;
   display: inline-block;
@@ -29,7 +29,8 @@
 }
 .fixed {
   z-index: 100000000000;
-  background-color: white;
+  // background-color: white;
+  @include bc('bc');
   position: fixed;
   top: 0;
   left: 0;

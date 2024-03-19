@@ -1,0 +1,7 @@
+<div style="display: inline-block; position: relative;" (click)="flagShow = !flagShow" (mouseenter)="flagShow = true" (mouseleave)="flagShow = false">
+    <ng-content></ng-content>
+    <div *ngIf="flagShow" (click)="flagShow = false" class="tooltiptitle" >
+      {{v}}
+    </div>
+</div>
+

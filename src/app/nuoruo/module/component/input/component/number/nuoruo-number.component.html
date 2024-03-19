@@ -1,0 +1,16 @@
+
+<div class="nuoruo-input-box" >
+    <input
+    type="number"
+    #input1
+    [(ngModel)]="fatherData"
+    (ngModelChange)="changeValue($event, input1)"
+    [ngStyle]="{ width: w + 'px' }"
+    [placeholder]="bold ? '' : placeholder"
+    [ngClass]="{bold: bold, novalue: _fathrData, disabled: disabled, 'radius-left': radius === 'left', 'radius-right': radius === 'right', 'radius-none': radius === 'none', 'group': group }"
+    [name]="name"
+    [disabled]="disabled ? true : false"
+    spellcheck="false"
+    />
+  <label *ngIf="bold">{{placeholder}}</label>
+</div>

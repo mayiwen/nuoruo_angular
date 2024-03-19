@@ -1,0 +1,10 @@
+<div class="mask"></div>
+<div  class="box"> 
+  <h3 *ngIf="messageSave.title">{{messageSave.title}}</h3>
+  <p *ngIf="messageSave.message" style="margin-bottom: 0px; word-break: break-all; text-align: left;">{{messageSave.message}}</p>
+  <br>
+  <div style="text-align: right; ">
+    <nr-button (click)="sure()">确定</nr-button> <nr-gap [w]="4"></nr-gap>
+    <nr-button (click)="cancel()">取消</nr-button>
+  </div>
+</div>

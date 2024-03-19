@@ -2,18 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NuoruoModule } from './nuoruo/nuoruo.module';
-import { NuoruoLoadingService } from './nuoruo/module/component/loading/service/nuoruo-loading.service';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, NuoruoModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [NuoruoLoadingService]
+  providers: []
 })
 export class AppComponent {
   title = 'nuoruo_angular';
-  constructor(private loading: NuoruoLoadingService) {
+  constructor() {
 
   }
   changeTheme() {
@@ -23,9 +22,6 @@ export class AppComponent {
     } else {
       window.document.documentElement.setAttribute('data-nuoruo-theme', 'black');
     }
-  }
-  show() {
-    this.loading.show()
   }
   
 

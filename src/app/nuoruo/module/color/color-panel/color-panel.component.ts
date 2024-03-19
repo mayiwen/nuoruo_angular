@@ -6,22 +6,22 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class ColorPanelComponent implements OnInit, AfterViewInit {
   arr = [
-    '0',
+    // '0',
     '1',
     '2',
     '3',
     '4',
     '5',
-    '6',
-    '7',
-    '8',
-    '9',
+    // '6',
+    // '7',
+    // '8',
+    // '9',
     'a',
     'b',
     'c',
     'd',
     'e',
-    'f',
+    // 'f',
   ];
   arr2 = [];
   arr3 = [] as any;
@@ -30,9 +30,7 @@ export class ColorPanelComponent implements OnInit, AfterViewInit {
     let arr1: any = [];
     for (let index = 0; index < this.arr.length; index++) {
       console.log('打印' + index);
-      for (let j = 0; j < this.arr.length; j++) {
-        arr1.push(this.arr[index] + '' + this.arr[j]);
-      }
+      arr1.push(this.arr[index] + '' + this.arr[index])
     }
     console.log(arr1);
 

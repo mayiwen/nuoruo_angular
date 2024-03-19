@@ -7,7 +7,16 @@ $themes: (
     bc: #f7f7f7, // 背景
     boxBc: #f1f1f1, // 一级盒子背景
     activeBc: #e6e6e6, // 一级盒子选中色
-    active: #9b89d1, // 选中色
+    active: #545fc2, // 选中色
+    redDefault: #e74c3c, // 红色悬停
+    redHover: #d64130, // 红色悬停
+    redDisabled: #f3a69e, // 红色禁用
+    blueDefault: #3f85ff, // 蓝色悬停
+    blueHover: #2b77fc, // 蓝色悬停
+    blueDisabled: #9fc2ff, // 蓝色禁用
+    yellowDefault: #f1c40d, // 蓝色悬停
+    yellowHover: #e9bd0c, // 蓝色悬停
+    yellowDisabled: #f8e286, // 蓝色禁用
   ),
   black: (
     color: #afafaf, // 颜色
@@ -15,7 +24,16 @@ $themes: (
     bc: #242424, // 背景
     boxBc: #333, // 一级盒子背景
     activeBc: #393939, // 一级盒子选中色
-    active: #6f4fc9, // 选中色
+    active: #7882d3, // 选中色,
+    redDefault: #e74c3c, // 红色悬停
+    redHover: #d64130, // 红色悬停
+    redDisabled: #f3a69e, // 红色禁用
+    blueDefault: #3f85ff, // 蓝色悬停
+    blueHover: #2b77fc, // 蓝色悬停
+    blueDisabled: #9fc2ff, // 蓝色禁用
+    yellowDefault: #f1c40d, // 蓝色悬停
+    yellowHover: #e9bd0c, // 蓝色悬停
+    yellowDisabled: #f8e286, // 蓝色禁用
   )
 );
 

@@ -1,4 +1,22 @@
-<button [disabled]="disabled || loading" [ngClass]="{active: active}" [ngStyle]="{width: width + 'px', minWidth: minWidth + 'px'}" [title]="minWidth">
-    <nr-loading w="24px" *ngIf="loading"></nr-loading>
-    <ng-content></ng-content>
+<!-- {{color}} -->
+<button
+  [disabled]="disabled || loading"
+  [ngClass]="{
+    active: active,
+    noBorder: noBorder,
+    noBg: noBg,
+    'nuoruo-elipse': true,
+    'radius-left': radius === 'left',
+    'radius-right': radius === 'right',
+    'radius-none': radius === 'none',
+    'red': color === 'red',
+    'yellow': color === 'yellow',
+    'blue': color === 'blue',
+    'group': group
+  }"
+  [ngStyle]="{ width: _width, minWidth: minWidth, maxWidth: maxWidth }"
+  [title]="title"
+>
+  <nr-loading w="24px" *ngIf="loading"></nr-loading>
+  <ng-content></ng-content>
 </button>

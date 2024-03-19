@@ -1,0 +1,29 @@
+@import '../../../../../assets/nuoruo_style/index.scss';
+:host {
+  .mask {
+    position: fixed; left: 0; top: 0; height: 100%; width: 100%; 
+    z-index: 10000;
+    @include bc('color');
+    opacity: 0.5;
+  }
+  .content {
+    position: fixed;  border-radius: 5px;
+    // top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    @include bc('bc');
+
+  }
+  header { 
+    height: 30px;  line-height: 30px; padding-left: 10px; border-radius: 5px 5px 0 0;
+    // @include bc('boxBc');
+    // @include borderBottom('border')
+  }
+  .footer {
+    height: 30px; width: 100%; text-align: right; padding: 0 3px; box-sizing: border-box;
+    padding-top: .5px;
+    @include borderTop('border')
+  }
+}

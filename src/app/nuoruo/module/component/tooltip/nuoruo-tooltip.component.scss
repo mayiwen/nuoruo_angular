@@ -1,0 +1,17 @@
+@import '../../../../../assets/nuoruo_style/index.scss';
+.tooltiptitle {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  min-width: 300px;
+  max-width: 500px;
+  transform: translateY(-100%);
+  @include border("border");
+  @include bc("bc");
+  opacity: 0.9;
+
+  // color: white;
+  border-radius: 5px;
+  padding: 3px;
+}

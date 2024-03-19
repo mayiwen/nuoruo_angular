@@ -12,4 +12,4 @@ const components = [
   bootstrap: [],
   providers: [],
 })
-export class MywIconModule {}
+export class NuoruoIconModule {}

@@ -1,0 +1,21 @@
+@import '../../../../../../../assets/nuoruo_style/index.scss';
+textarea {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 3px;
+    outline: none;
+    @include bc('boxBc');
+    @include border('border');
+    @include c('color');
+    // box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    &.novalue,
+    &:focus {
+        &~label {
+            top: 8px;
+            left: 0;
+        }
+    }
+    &.disabled {
+        @include bc('border');
+    }
+}

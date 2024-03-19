@@ -1,0 +1,33 @@
+@import '../../../../../assets/nuoruo_style/index.scss';
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  @include bc('color');
+  opacity: 0.5;
+  z-index: 500;
+  height: 100%;
+  width: 100%;
+
+}
+.box {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%)!important;
+  @include bc('bc');
+  @include c('color');
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  opacity: 1;
+  z-index: 1000;
+  width: 500px;
+}
+
+
+button {
+  border-radius: 50%;
+}

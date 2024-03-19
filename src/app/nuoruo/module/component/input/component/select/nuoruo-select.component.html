@@ -1,0 +1,9 @@
+<div style="position: relative; display: inline-block;" >
+  <nr-input [(ngModel)]="showAndSearchValue" [w]="w" placeholder="请选择" [name]="name" (ngModelChange)="inputChangeFn($event)" (click)="$event.stopPropagation(); flagShow = true" [group]="group" [radius]="radius"></nr-input>
+  <nr-icon icon="icon-down" style="position: absolute; right: 0; top: 0;pointer-events: none; transform: scale(.5);" [h]="30"></nr-icon>
+  <div class="title" *ngIf="flagShow" style="max-height: 200px; overflow: auto;">
+    <div *ngFor="let item of optionList;" (click)="select(item)" >
+      <nr-button w="300" [title]="item.o[v]" [noBorder]="true"> {{item.o[v]}}</nr-button>
+    </div>
+  </div>
+</div>

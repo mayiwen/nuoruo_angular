@@ -1,0 +1,8 @@
+<nr-gap></nr-gap>
+<h1>根据父元素的大小生成格子</h1>
+<nr-drag *ngIf="true" (close)="false" v="使用nr-dialog 使div 可拖动。" [position]="false" (dragEnd)="dragEnd()">
+    <div style="height: 100%; height: 100%;">
+        <nr-grid #grid></nr-grid>
+    </div>
+</nr-drag>
+

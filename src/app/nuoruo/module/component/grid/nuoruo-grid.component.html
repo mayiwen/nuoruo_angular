@@ -1,0 +1,10 @@
+
+<div class="grid-box" #gridBox [ngStyle]="{
+    'grid-template-columns': 'repeat(' + arrWidth.length + ', 40px)',
+    'grid-template-rows': 'repeat(' + arrHeight.length + ', 40px)'}" >
+    <ng-container *ngFor="let h of arrHeight;">
+        <ng-container *ngFor="let w of arrWidth;">
+            <div>{{ h + ' ' + w}}</div>
+        </ng-container>
+    </ng-container>
+</div>

@@ -1,9 +1,0 @@
-<!-- <div style="position: relative; display: inline-block;" (mouseenter)="flagShow = true"> -->
-<div style="position: relative; display: inline-block;" >
-  <myw-input [(ngModel)]="showAndSearchValue" w="150" placeholder="请选择" [name]="name" (ngModelChange)="inputChangeFn($event)" (click)="$event.stopPropagation(); flagShow = true"></myw-input>
-  <div class="title" *ngIf="flagShow" style="max-height: 200px; overflow: overlay;">
-    <div *ngFor="let item of optionList;" (click)="select(item)">
-      <nr-button w="300"> {{item.o[v]+ '|' + item.o[value]}}</nr-button>
-    </div>
-  </div>
-</div>

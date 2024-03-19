@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, OnInit, Output, QueryList, ViewChild, ViewChildren, forwardRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ContentChildren, EventEmitter, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NuoruoTabComponent } from './tab/nuoruo-tab.component';
 @Component({
@@ -12,24 +12,46 @@ import { NuoruoTabComponent } from './tab/nuoruo-tab.component';
   }]
 })
 export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueAccessor {
+  @Input() flagShowIcon = false
+  @Input() oneLine = false
   @ContentChildren(NuoruoTabComponent) tabsetList!: QueryList<NuoruoTabComponent>;
   @Output() tabClick = new EventEmitter()
+  @Output() dlbTabClick = new EventEmitter()
+  @Output() closeClick = new EventEmitter()
+  @Output() contextmenuTabClick = new EventEmitter()
   tabsetTitleList = [] as any;
   selectTab = 0;
   _fatherNgModel: any
   constructor( private cdr: ChangeDetectorRef ) {
 
   }
+
   get fatherNgModel() {
     return this._fatherNgModel;
   }
   set fatherNgModel(data: any) {
     this._fatherNgModel = data;
   }
-
+  
+  
   ngOnInit(): void {
   }
+
+  reload() {
+    this.ngAfterViewInit()
+  }
   changeTab(index: any) {
+    this.tabClick.emit(this.clickTrans(index))
+  }
+
+  dlbTabClickFn(index: any) {
+    return false
+    this.dlbTabClick.emit(this.clickTrans(index))
+  }
+  contextmenuTabClickFn(index: any) {
+    this.contextmenuTabClick.emit(this.clickTrans(index))
+  }
+  clickTrans(index: any) {
     this.selectTab = index;
     this.changeData = index;
     let itemSave
@@ -47,8 +69,9 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
       item.selectTab = indexi;
       item.nextTick();
     });
-    this.tabClick.emit(itemSave)
+    return itemSave
   }
+
   ngAfterViewInit() {
     console.log('这是打印的内容')
     console.log('tabset ngAfterViewInit')
@@ -63,7 +86,7 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
       item.selectTab = index;
       item.nextTick();
     });
-  
+    this.tabsetTitleList = []
     this.tabsetList.forEach((item, index) => {
       this.tabsetTitleList.push({
         v: item.v,
@@ -75,6 +98,21 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
     this.tabsetList.forEach((item, index) => {
       item.nextTick();
     });
+  }
+  selectByKey(id: string | number) {
+    this.tabsetList.forEach((item, index) => {
+      console.log(item)
+      if (item.id === id) {
+        item.flagShow = true;
+        this.selectTab = index;
+        this.changeData = index;
+      } else {
+        item.flagShow = false;
+      }
+      item.selectTab = index;
+      item.nextTick();
+    });
+    this.cdr.detectChanges()
   }
 
   /** controlvalue */
@@ -97,5 +135,12 @@ export class NuoruoTabsComponent implements OnInit, AfterViewInit, ControlValueA
   set changeData(value:any) {
     this.fatherNgModel = value;
     this.change(this.fatherNgModel)
+  }
+
+  iconCloseClick(e: any, tab: NuoruoTabComponent) {
+    e.stopPropagation()
+    // e.preventDefault()
+    console.log('iconCloseClick')
+    this.closeClick.emit(tab)
   }
 }

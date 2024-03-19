@@ -1,4 +1,4 @@
-@import '../../../../../assets/nuoruo_style/handle.scss';
+@import '../../../../../assets/nuoruo_style/index.scss';
 :host {
   .title {
     @include borderBottom('border');
@@ -13,5 +13,35 @@
   }
   .title span.active {
     @include c('activeColor')
+  }
+  .oneLine {
+    overflow: auto; height: 30px;
+  }
+  .flex1 {
+    flex: 1;
+  }
+
+  .maxWidth{
+    width: 50px;
+  }
+  .defaultWidth {
+    width: 80px;
+  }
+  .icon-class {
+    position: absolute; right: 3px; top: 1px;border-radius: 20px;
+    height: 28px;
+    line-height: 10px;
+    background-color: transparent;
+    // color: red;
+    // z-index: 10;
+    // @include bc('boxBc');
+    // background-color: yellow;
+    
+  }
+  .img {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-bottom: -6px;
   }
 }
